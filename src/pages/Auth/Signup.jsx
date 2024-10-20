@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 const Signup = () => {
 
-  const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
@@ -19,26 +18,12 @@ const Signup = () => {
   return (
     <div className="w-screen  flex p-3 h-screen min-h-[600px] overflow-hidden">
       <div className="relative hidden md:flex md:w-1/3 h-full  bg-gray-200 rounded-xl overflow-hidden">
-        <h1 className="font-bold text-lg absolute top-5 left-6">core.</h1>
-        <img src="/assets/mockup.png" alt="" className="absolute bottom-0 w-[125%] max-w-[500px] left-10"/>
+        <h1 className="font-bold text-xl absolute top-5 left-6">core.</h1>
+        <img src="/assets/mockup.png" alt="" className="absolute bottom-0 w-[85%] max-w-[500px] left-[50%] -translate-x-1/2" />
       </div>
       <div className="w-full md:w-2/3 flex flex-col items-center justify-center">
         <h1 className="text-6xl font-bold mb-5">core.</h1>
         <form className="space-y-4 w-4/5 max-w-[400px]">
-          <div>
-            <label htmlFor="username" className="block text-sm font-medium text-gray-700">
-              Username
-            </label>
-            <input
-              type="text"
-              id="username"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              className="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-              placeholder="Enter your username"
-            />
-          </div>
-
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-700">
               Email
