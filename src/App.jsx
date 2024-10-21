@@ -4,6 +4,7 @@ import AuthLayout from "./layout/AuthLayout";
 import "./global.css"
 
 function App() {
+  const user = null
   return (
     <>
       <BrowserRouter >

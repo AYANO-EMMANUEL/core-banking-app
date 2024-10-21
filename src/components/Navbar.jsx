@@ -21,7 +21,7 @@ const Navbar = () => {
                     <button className='bg-black px-5 py-2.5 text-white font-semibold rounded-lg'>Get Started</button>
                 </a>
                 <a href="/signup">
-                    <button className='bg-none border-2 border-black ml-3 px-5 py-2.5 text-white font-semibold rounded-lg text-black'>Login</button>
+                    <button className='bg-none border-2 border-black ml-3 px-5 py-2.5 font-semibold rounded-lg text-black'>Login</button>
                 </a>
             </div>
         </div>

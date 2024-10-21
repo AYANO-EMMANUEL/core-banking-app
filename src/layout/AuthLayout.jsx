@@ -1,5 +1,5 @@
 import React from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Outlet } from 'react-router-dom'
 import Signup from '../pages/Auth/Signup'
 import Login from '../pages/Auth/Login'
 import Verification from '../pages/Auth/Verification'
