@@ -22,7 +22,8 @@ const Signup = () => {
         <img src="/assets/mockup.png" alt="" className="absolute bottom-0 w-[85%] max-w-[500px] left-[50%] -translate-x-1/2" />
       </div>
       <div className="w-full md:w-2/3 flex flex-col items-center justify-center">
-        <h1 className="text-6xl font-bold mb-5">core.</h1>
+        <h1 className="text-6xl font-bold mb-3">core.</h1>
+        <p className="text-sm text-gray-400 mb-4">Create your account now</p>
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 w-4/5 max-w-[400px]">
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-700">
@@ -87,7 +88,7 @@ const Signup = () => {
             </label>
             <input
               {...register("confirmPassword", {
-                required: true,
+                required: 'Confirm your password!',
                 validate: (val) => {
                   if (watch('password') != val) {
                     return "Your passwords do no match";

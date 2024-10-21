@@ -22,7 +22,7 @@ const Login = () => {
       </div>
       <div className="w-full md:w-2/3 flex flex-col items-center justify-center">
         <h1 className="text-6xl font-bold">core.</h1>
-        <div className="mb-5">Please enter your details</div>
+        <div className="text-sm text-gray-400 mb-4">Enter your details to login</div>
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 w-4/5 max-w-[400px]">
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-700">
@@ -89,7 +89,7 @@ const Login = () => {
             type="submit"
             className="mt-6 w-full bg-black text-white p-3 rounded-md hover:bg-neutral-900 transition duration-200"
           >
-            Sign Up
+            Login
           </button>
           <div>Don't have an account yet? <Link className="text-green-600 font-bold" to={'/signup'}>Sign up.</Link></div>
         </form>

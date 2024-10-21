@@ -1,79 +1,107 @@
 import React, { useState, useEffect } from 'react';
 
 const OTPVerification = () => {
-  const [otp, setOtp] = useState('');
-  const [timer, setTimer] = useState(30);  // Resend timer starts at 30 seconds
-  const [canResend, setCanResend] = useState(false);  // Control if the resend button is enabled
+  const [otp, setOtp] = useState(new Array(5).fill(''));
+  const [isComplete, setIsComplete] = useState(false);
+  const [timer, setTimer] = useState(30);
+  const [isResendEnabled, setIsResendEnabled] = useState(false);
 
   useEffect(() => {
+   
     if (timer > 0) {
-      const intervalId = setInterval(() => {
-        setTimer((prevTimer) => prevTimer - 1);
+      const countdown = setInterval(() => {
+        setTimer((prev) => prev - 1);
       }, 1000);
 
-      return () => clearInterval(intervalId);  // Cleanup interval on unmount
+      return () => clearInterval(countdown);
     } else {
-      setCanResend(true);  // Allow resending when timer reaches 0
+      setIsResendEnabled(true);
     }
   }, [timer]);
 
-  const handleResend = () => {
-    setTimer(30);  // Reset the timer
-    setCanResend(false);  // Disable resending while the timer is running
-    // Logic to resend OTP goes here
+  const handleChange = (element, index) => {
+    const value = element.value;
+
+    if (/^[0-9]$/.test(value) || value === '') {
+      const newOtp = [...otp];
+      newOtp[index] = value;
+      setOtp(newOtp);
+
+     
+      if (value && index < otp.length - 1) {
+        element.nextSibling.focus();
+      }
+
+     
+      if (!value && index > 0) {
+        element.previousSibling.focus();
+      }
+
+     
+      setIsComplete(newOtp.every((digit) => digit !== ''));
+    }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add logic to verify OTP
-    console.log("OTP Submitted:", otp);
+    if (isComplete) {
+      console.log("OTP Submitted:", otp.join(''));
+     
+    }
+  };
+
+  const handleResendOTP = () => {
+    setTimer(30);
+    setIsResendEnabled(false);
+    setOtp(new Array(5).fill(''));
+    console.log("OTP Resent");
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-white">
-      <div className="text-center">
-        <h1 className="text-3xl font-bold text-black mb-6">Verify OTP</h1>
-        <p className="text-lg text-gray-600 mb-6">
-          Please enter the OTP sent to your <strong>ayodejiola@gmail.com</strong>.
-        </p>
+    <div className="min-h-screen flex flex-col items-center justify-center bg-white text-center">
+      <h1 className="font-bold text-2xl absolute top-5 left-6">core.</h1>
+      <h1 className="text-3xl font-bold text-black mb-6">Verify OTP</h1>
+      <p className="text-lg text-gray-600 mb-6">Please enter the OTP sent to your email address.</p>
 
-        <form onSubmit={handleSubmit} className="mb-6">
-          <input
-            type="text"
-            maxLength="6"
-            value={otp}
-            onChange={(e) => setOtp(e.target.value)}
-            placeholder="Enter OTP"
-            className="text-center text-lg tracking-widest w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-black focus:outline-none"
-          />
+      <form onSubmit={handleSubmit} className="mb-6 flex flex-col justify-center">
+        <div className="flex space-x-2">
+          {otp.map((digit, index) => (
+            <input
+              key={index}
+              type="text"
+              maxLength="1"
+              value={digit}
+              onChange={(e) => handleChange(e.target, index)}
+              className={`sm:w-[64px] sm:h-[64px] w-[50px] h-[50px] text-center text-lg border-2 transition duration-300 ${digit ? 'border-green-400' : 'border-gray-300'
+                } rounded-md focus:border-2 focus:border-green-500 focus:outline-none`}
+            />
+          ))}
+        </div>
+        <button
+          type="submit"
+          onClick={handleSubmit}
+          className="bg-green-400 cursor-pointer text-white mt-4 py-3 px-4 rounded-md hover:bg-green-300 w-full transition duration-300"
+          disabled={!isComplete}
+        >
+          Verify OTP
+        </button>
+      </form>
 
+      {timer > 0 ? (
+        <p className="text-gray-600">Resend OTP in {timer} seconds</p>
+      ) : (
+        <span>
+          Didn't receive a code? {" "}
           <button
-            type="submit"
-            className="bg-green-400 text-white py-2 px-4 rounded-md hover:bg-green-300 mt-4 w-full transition duration-300"
+            onClick={handleResendOTP}
+            className={`font-bold cursor-pointer ${isResendEnabled ? 'text-green-300' : 'text-gray-500 cursor-not-allowed'
+              } underline`}
+            disabled={!isResendEnabled}
           >
-            Verify OTP
+            Resend OTP
           </button>
-        </form>
-
-        <div className="bg-gray-100 text-black py-4 px-6 rounded-lg inline-block shadow">
-          {canResend ? (
-            <button
-              onClick={handleResend}
-              className="bg-black text-white text-sm py-2 px-4 rounded-md hover:bg-neutral-900 transition"
-            >
-              Resend OTP
-            </button>
-          ) : (
-            <p className="tex">
-              Resend available in <span className="font-bold">{timer}</span> seconds
-            </p>
-          )}
-        </div>
-
-        <div className="mt-6">
-          <p className="text-gray-600 text-sm">Didn’t receive the OTP? Try resending after the timer runs out.</p>
-        </div>
-      </div>
+        </span>
+      )}
     </div>
   );
 };
