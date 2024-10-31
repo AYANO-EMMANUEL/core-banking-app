@@ -6,7 +6,7 @@ import Navbar from '../components/Navbar'
 const Layout = () => {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <Routes>
         <Route path='/' exact element={<Home />} />
         {/* <Route path='/contact' exact element={<Contact /> } /> */}
