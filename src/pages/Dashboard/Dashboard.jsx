@@ -1,8 +1,11 @@
-import { AiOutlinePlus } from "react-icons/ai";
+// import { PhoneIcon } from "lucide-react";
+import { AiOutlinePlus, AiTwotonePicture } from "react-icons/ai";
 import { BiDotsVerticalRounded } from "react-icons/bi";
 import { CgProfile } from "react-icons/cg";
+import { FaGraduationCap } from "react-icons/fa";
 import { GiPlayButton } from "react-icons/gi";
 import { IoNotifications } from "react-icons/io5";
+import { RiBankFill } from "react-icons/ri";
 
 const Dashboard = () => {
   const Naira = ({ color, styles }) => {
@@ -35,7 +38,7 @@ const Dashboard = () => {
     );
   };
 
-  const CardIcon = ({ color, styles }) => {
+  const CardlessIcon = ({ color, styles }) => {
     return (
       <svg
         width="55"
@@ -57,11 +60,11 @@ const Dashboard = () => {
     );
   };
 
-  const RequestMoneyIcon = ({color}) => {
+  const RequestMoneyIcon = ({ color }) => {
     return (
       <svg
-        width="34"
-        height="34"
+        width="40"
+        height="40"
         viewBox="0 0 34 34"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -98,14 +101,83 @@ const Dashboard = () => {
     );
   };
 
+  const PhoneIcon = ({ color }) => {
+    return (
+      <svg
+        width="40"
+        height="40"
+        viewBox="0 0 40 40"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M31.24 17.905L31.2509 17.5003L30.9776 7.33707C30.9738 7.19754 30.9641 7.05944 30.9487 6.92302L30.9357 6.79918C30.7985 5.43259 30.0407 4.24088 28.9374 3.5236C28.8521 3.46674 28.7648 3.41267 28.6755 3.36152C28.5909 3.31149 28.5045 3.26406 28.4164 3.21931C27.8728 2.93282 27.2662 2.74712 26.6206 2.68769C22.2165 2.28229 17.7844 2.28229 13.3803 2.68769C12.7337 2.74721 12.1262 2.93341 11.5819 3.22068C11.4938 3.26549 11.4074 3.313 11.3228 3.36309C11.2363 3.41275 11.1516 3.46516 11.0688 3.5202C9.95962 4.23908 9.19849 5.43701 9.06414 6.81052L9.05921 6.85775L9.05299 6.91635C9.03712 7.05494 9.02716 7.19526 9.02334 7.33706L8.75 17.5003L8.76094 17.9069L8.7501 18.3336L8.76044 18.7407L8.75018 19.1669L8.75993 19.5723L8.75015 20.0003L9.02078 31.8386C9.085 34.6474 11.2213 36.9735 14.0145 37.276C17.9935 37.7069 22.0074 37.7069 25.9865 37.276C28.7797 36.9735 30.9159 34.6474 30.9802 31.8386L31.2508 20.0003L31.2411 19.5751L31.2509 19.1669L31.2406 18.739L31.2509 18.3336L31.24 17.905ZM28.5072 14.8629L28.4576 7.20143C28.457 7.17699 28.456 7.15266 28.4545 7.12844C28.3555 6.45765 27.9668 5.87863 27.4156 5.5271C27.207 5.41838 26.9755 5.34627 26.7293 5.31961C22.2565 4.83522 17.7445 4.83522 13.2717 5.31961C13.0253 5.34628 12.7938 5.41843 12.5851 5.52723C12.0341 5.87867 11.6456 6.45742 11.5465 7.12788C11.545 7.15228 11.544 7.1768 11.5434 7.20142L11.4937 14.8629C11.5414 16.6352 12.9066 18.092 14.672 18.2545C18.2168 18.5808 21.7841 18.5808 25.3289 18.2545C27.0943 18.092 28.4595 16.6352 28.5072 14.8629ZM12.5005 20C12.0403 20 11.6672 20.3731 11.6672 20.8333C11.6672 21.2936 12.0403 21.6667 12.5005 21.6667H14.1672C14.6274 21.6667 15.0005 21.2936 15.0005 20.8333C15.0005 20.3731 14.6274 20 14.1672 20H12.5005ZM11.6672 25.8333C11.6672 25.3731 12.0403 25 12.5005 25H14.1672C14.6274 25 15.0005 25.3731 15.0005 25.8333C15.0005 26.2936 14.6274 26.6667 14.1672 26.6667H12.5005C12.0403 26.6667 11.6672 26.2936 11.6672 25.8333ZM12.5005 30C12.0403 30 11.6672 30.3731 11.6672 30.8333C11.6672 31.2936 12.0403 31.6667 12.5005 31.6667H14.1672C14.6274 31.6667 15.0005 31.2936 15.0005 30.8333C15.0005 30.3731 14.6274 30 14.1672 30H12.5005ZM18.3338 20.8333C18.3338 20.3731 18.7069 20 19.1672 20H20.8338C21.2941 20 21.6672 20.3731 21.6672 20.8333C21.6672 21.2936 21.2941 21.6667 20.8338 21.6667H19.1672C18.7069 21.6667 18.3338 21.2936 18.3338 20.8333ZM19.1672 25C18.7069 25 18.3338 25.3731 18.3338 25.8333C18.3338 26.2936 18.7069 26.6667 19.1672 26.6667H20.8338C21.2941 26.6667 21.6672 26.2936 21.6672 25.8333C21.6672 25.3731 21.2941 25 20.8338 25H19.1672ZM18.3338 30.8333C18.3338 30.3731 18.7069 30 19.1672 30H20.8338C21.2941 30 21.6672 30.3731 21.6672 30.8333C21.6672 31.2936 21.2941 31.6667 20.8338 31.6667H19.1672C18.7069 31.6667 18.3338 31.2936 18.3338 30.8333ZM25.8338 20C25.3736 20 25.0005 20.3731 25.0005 20.8333C25.0005 21.2936 25.3736 21.6667 25.8338 21.6667H27.5005C27.9607 21.6667 28.3338 21.2936 28.3338 20.8333C28.3338 20.3731 27.9607 20 27.5005 20H25.8338ZM25.0005 25.8333C25.0005 25.3731 25.3736 25 25.8338 25H27.5005C27.9607 25 28.3338 25.3731 28.3338 25.8333C28.3338 26.2936 27.9607 26.6667 27.5005 26.6667H25.8338C25.3736 26.6667 25.0005 26.2936 25.0005 25.8333ZM25.8338 30C25.3736 30 25.0005 30.3731 25.0005 30.8333C25.0005 31.2936 25.3736 31.6667 25.8338 31.6667H27.5005C27.9607 31.6667 28.3338 31.2936 28.3338 30.8333C28.3338 30.3731 27.9607 30 27.5005 30H25.8338Z"
+          fill={color}
+        />
+      </svg>
+    );
+  };
+
+  const CardIcon = ({ color }) => {
+    return (
+      <svg
+        width="35"
+        height="29"
+        viewBox="0 0 35 29"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M9.02122 1.34657C14.6633 0.856116 20.3372 0.856116 25.9793 1.34657L28.6851 1.58178C31.2742 1.80685 33.3716 3.77704 33.7581 6.34699C34.5709 11.7519 34.5709 17.248 33.7581 22.653C33.687 23.1258 33.558 23.5783 33.3786 24.0034C33.2597 24.2853 32.8928 24.328 32.6871 24.1017L24.7653 15.3878C24.4074 14.994 23.8509 14.8486 23.3461 15.0169L18.8117 16.5283L12.2337 9.12809C11.9878 8.85149 11.6388 8.68853 11.2689 8.67766C10.8989 8.66679 10.5409 8.80897 10.2792 9.07065L1.47474 17.8751C1.20376 18.1461 0.741619 17.9736 0.720014 17.591C0.508175 13.8395 0.682301 10.0716 1.24239 6.34699C1.62885 3.77704 3.7263 1.80685 6.31538 1.58178L9.02122 1.34657ZM21.0836 9.125C21.0836 7.64073 22.2868 6.4375 23.7711 6.4375C25.2553 6.4375 26.4586 7.64073 26.4586 9.125C26.4586 10.6093 25.2553 11.8125 23.7711 11.8125C22.2868 11.8125 21.0836 10.6093 21.0836 9.125Z"
+          fill={color}
+        />
+        <path
+          d="M1.30594 21.8446C1.20677 21.9438 1.15966 22.0837 1.17941 22.2226C1.19983 22.3661 1.22083 22.5096 1.24239 22.653C1.62885 25.2229 3.7263 27.1931 6.31538 27.4182L9.02122 27.6534C14.6633 28.1439 20.3372 28.1439 25.9793 27.6534L28.6851 27.4182C29.4459 27.3521 30.1642 27.1352 30.8092 26.7968C31.0536 26.6685 31.0948 26.3454 30.9091 26.1411L23.5618 18.0592C23.4425 17.9279 23.257 17.8794 23.0888 17.9355L18.821 19.3581C18.311 19.5281 17.7488 19.3778 17.3917 18.9761L11.4874 12.3338C11.3162 12.1411 11.0182 12.1324 10.8359 12.3146L1.30594 21.8446Z"
+          fill={color}
+        />
+      </svg>
+    );
+  };
+
+  // DASHBOARDS
+  const DashboardIcon = ({ color, color1 }) => {
+    return (
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 20 20"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M14.0756 0H17.4616C18.8639 0 20.0001 1.14585 20.0001 2.55996V5.97452C20.0001 7.38864 18.8639 8.53449 17.4616 8.53449H14.0756C12.6734 8.53449 11.5371 7.38864 11.5371 5.97452V2.55996C11.5371 1.14585 12.6734 0 14.0756 0Z"
+          fill={color}
+        />
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M2.53852 0H5.92449C7.32676 0 8.46301 1.14585 8.46301 2.55996V5.97452C8.46301 7.38864 7.32676 8.53449 5.92449 8.53449H2.53852C1.13626 8.53449 0 7.38864 0 5.97452V2.55996C0 1.14585 1.13626 0 2.53852 0ZM2.53852 11.4655H5.92449C7.32676 11.4655 8.46301 12.6114 8.46301 14.0255V17.44C8.46301 18.8532 7.32676 20 5.92449 20H2.53852C1.13626 20 0 18.8532 0 17.44V14.0255C0 12.6114 1.13626 11.4655 2.53852 11.4655ZM17.4615 11.4655H14.0755C12.6732 11.4655 11.537 12.6114 11.537 14.0255V17.44C11.537 18.8532 12.6732 20 14.0755 20H17.4615C18.8637 20 20 18.8532 20 17.44V14.0255C20 12.6114 18.8637 11.4655 17.4615 11.4655Z"
+          fill={color1}
+        />
+      </svg>
+    );
+  };
+
   return (
     <div className="flex w-12/12 cursor-context-menu">
       {/* SIDEBAR NAV */}
       <div className="w-2/12 border-r-[1px] border-gray-100 h-screen">
-        <h1 className="text-6xl font-bold text-center mt-10">core.</h1>
+        <h1 className="text-6xl font-bold text-center mt-10 mb-40">core.</h1>
+        <div className="">
+          <Dashboard color={"#200E32"} color1={"#C0CCDA"} />
+        </div>
       </div>
       {/* MAIN WALLET */}
-      <div className="w-7/12 mx-6 mt-12">
+      <div className="w-7/12 mx-6 mt-12 mb-8">
         <div className="text-5xl">Wallet</div>
         <div className="flex space-x-6 mb-3">
           <div className="flex">
@@ -117,10 +189,10 @@ const Dashboard = () => {
               <div className="kycLevel opacity-[0.6]">KYC Level 1</div>
             </div>
           </div>
-          <div className="flex space-x-10 hover:border-gray-100 hover:shadow-md hover:rounded-3xl hover:drop-shadow-md cursor-pointer">
+          <div className="flex space-x-10 hover:border-gray-100 hover:shadow-md border-[0.5px] border-t-0 border-l-0 rounded-3xl hover:rounded-3xl hover:drop-shadow-md cursor-pointer">
             <div className="flex align-middle ps-4">
               <div className="rounded-md p-3 m-auto bg-green-40">
-                <CardIcon color={"#4ADE80"} />
+                <CardlessIcon color={"#4ADE80"} />
               </div>
               <div className="m-auto">
                 <div className="kycLevelNext">Upgrade KYC Level 2</div>
@@ -166,14 +238,14 @@ const Dashboard = () => {
           </div>
         </div>
         {/* REQ & SEND BOX */}
-        <div className="flex space-x-6 my-5">
-          <div className="flex justify-between w-3/6 border-gray-100 shadow-md rounded-3xl cursor-pointer">
+        <div className="flex space-x-6 my-6">
+          <div className="flex justify-between w-3/6 border-gray-100 border-[1.5px] hover:border-none hover:shadow-md rounded-3xl cursor-pointer">
             <div className="flex align-middle ps-4">
               <div className="rounded-md p-3 m-auto bg-green-40">
                 <RequestMoneyIcon color={"#4ADE80"} />
               </div>
               <div className="m-auto">
-                <div className="ps-2">Request Money</div>
+                <div className="ps-3">Request Money</div>
               </div>
             </div>
             <div className="m-auto mr-10">
@@ -181,24 +253,24 @@ const Dashboard = () => {
             </div>
           </div>
           {/* WITHDRAWAL CARD BOX */}
-          <div className="flex justify-between w-3/6 border-gray-100 shadow-md rounded-3xl cursor-pointer">
+          <div className="flex justify-between w-3/6 border-gray-100 border-[1.5px] hover:border-none hover:shadow-md rounded-3xl cursor-pointer">
             <div className="flex align-middle ps-4">
               <div className="rounded-md p-3 m-auto bg-green-40">
-                <CardIcon color={"#4ADE80"} />
+                <CardlessIcon color={"#4ADE80"} />
               </div>
               <div className="m-auto">
-                <div className="ps-2">Cardless Withdrawal</div>
+                <div className="ps-1">Cardless Withdrawal</div>
               </div>
             </div>
-            <div className="m-auto px-4">
+            <div className="m-auto px-3">
               <GiPlayButton fill="#4ADE80" color="#4ADE80" />
             </div>
           </div>
         </div>
       </div>
       {/* RIGHT SIDE NAV */}
-      <div className="w-3/12 mt-10 mr-8 border-l-[1px] border-gray-100 h-screen">
-        <div className="flex justify-end">
+      <div className="w-3/12 mt-4 mr-8 border-l-[1px] border-gray-100 h-screen">
+        <div className="flex justify-end mb-9">
           <div className="inline-flex rounded-lg bg-gray-50">
             <div className="p-1 m-3 rounded-lg bg-[#FFFFFF;]">
               <IoNotifications
@@ -217,6 +289,88 @@ const Dashboard = () => {
                   color="#B2B2B2"
                   className="cursor-pointer"
                 />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="border rounded-3xl mx-4 border-gray-100">
+          <div className="flex justify-between">
+            <div className="flex justify-around align-middle rounded-tl-3xl p-5 w-3/6 cursor-pointer">
+              Deposit
+            </div>
+            <div className="flex justify-around bg-gray-100 rounded-tr-3xl align-middle p-5 w-3/6 cursor-pointer">
+              Transfer
+            </div>
+          </div>
+          <div className="px-4 mb-8">
+            <div className="bold text-center text-lg py-3">
+              Select a Method to Fund Naira Wallet below
+            </div>
+            <div className="mb-4 cursor-pointer">
+              <div
+                className="flex align-middle mx-1 p-2 border-gray-100 rounded-3xl hover:border-none hover:shadow-md"
+                style={{
+                  filter: "blur(0.76px)",
+                  opacity: "0.9",
+                  boxShadow: "0px 18px 3px -14px rgba(0,0,0,0.15)",
+                }}
+              >
+                <div className="flex align-middle rounded-md p-2 m-auto bg-green-40">
+                  <RiBankFill color={"#4ADE80"} size={"38"} />
+                  <span className="text-sm ps-2 my-auto">Bank Deposit</span>
+                </div>
+                <div className="m-auto">
+                  <GiPlayButton fill="#4ADE80" color="#4ADE80" />
+                </div>
+              </div>
+            </div>
+            <div className="mb-4 cursor-pointer">
+              <div
+                className="flex align-middle mx-1 p-2 border-gray-100 rounded-3xl hover:border-none hover:shadow-md"
+                style={{
+                  filter: "blur(0.76px)",
+                  opacity: "0.9",
+                  boxShadow: "0px 18px 3px -14px rgba(0,0,0,0.15)",
+                }}
+              >
+                <div className="flex align-middle rounded-md p-2 m-auto bg-green-40">
+                  <PhoneIcon color={"#4ADE80"} size={"38"} />
+                  <span className="text-sm ps-2 my-auto">USSD Deposit</span>
+                </div>
+                <div className="m-auto">
+                  <GiPlayButton fill="#C8E2DE" color="#C8E2DE" />
+                </div>
+              </div>
+            </div>
+            <div className="mb-4 cursor-pointer">
+              <div
+                className="flex align-middle mx-1 p-2 border-gray-100 rounded-3xl hover:shadow-md"
+                style={{
+                  filter: "blur(0.76px)",
+                  opacity: "0.9",
+                  boxShadow: "0px 18px 3px -14px rgba(0,0,0,0.15)",
+                }}
+              >
+                <div className="flex align-middle rounded-md p-2 m-auto bg-green-40">
+                  <CardIcon color={"#4ADE80"} size={"38"} />
+                  <span className="text-sm ps-2 my-auto">Card Deposit</span>
+                </div>
+                <div className="m-auto">
+                  <GiPlayButton fill="#C8E2DE" color="#C8E2DE" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="mb-5 cursor-pointer ">
+            <div className="flex align-middle bg-[#DEF5F2] justify-around mx-3 p-3 border-gray-100 rounded-3xl hover:border-none hover:shadow-md">
+              <div className="flex align-middle rounded-2xl p-1 m-auto bg-white">
+                <FaGraduationCap color={"#4ADE80"} size={"30"} />
+              </div>
+              <span className="text-sm ps-2 my-auto text-wrap">
+                Learn More about Funding your wallet
+              </span>
+              <div className="m-auto pr-4">
+                <GiPlayButton fill="#63BDAF" color="#63BDAF" />
               </div>
             </div>
           </div>
