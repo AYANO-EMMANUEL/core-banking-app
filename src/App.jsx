@@ -1,5 +1,5 @@
 import { BrowserRouter } from "react-router-dom";
-import Layout from "./layout/RootLayout";
+import RootLayout from "./layout/RootLayout";
 import AuthLayout from "./layout/AuthLayout";
 import "./global.css"
 
@@ -9,7 +9,7 @@ function App() {
     <>
       <BrowserRouter >
         <AuthLayout />
-        <Layout />
+        <RootLayout />
       </BrowserRouter>
     </>
   );
