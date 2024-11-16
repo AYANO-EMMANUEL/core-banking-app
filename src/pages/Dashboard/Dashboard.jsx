@@ -1,4 +1,3 @@
-// import { PhoneIcon } from "lucide-react";
 import { AiOutlinePlus, AiTwotonePicture } from "react-icons/ai";
 import { BiDotsVerticalRounded } from "react-icons/bi";
 import { CgProfile } from "react-icons/cg";
@@ -144,7 +143,7 @@ const Dashboard = () => {
   };
 
   // DASHBOARDS
-  const DashboardIcon = ({ color, color1 }) => {
+  const DashboardIcon = ({ color, colorTwo }) => {
     return (
       <svg
         width="20"
@@ -161,7 +160,7 @@ const Dashboard = () => {
           fill-rule="evenodd"
           clip-rule="evenodd"
           d="M2.53852 0H5.92449C7.32676 0 8.46301 1.14585 8.46301 2.55996V5.97452C8.46301 7.38864 7.32676 8.53449 5.92449 8.53449H2.53852C1.13626 8.53449 0 7.38864 0 5.97452V2.55996C0 1.14585 1.13626 0 2.53852 0ZM2.53852 11.4655H5.92449C7.32676 11.4655 8.46301 12.6114 8.46301 14.0255V17.44C8.46301 18.8532 7.32676 20 5.92449 20H2.53852C1.13626 20 0 18.8532 0 17.44V14.0255C0 12.6114 1.13626 11.4655 2.53852 11.4655ZM17.4615 11.4655H14.0755C12.6732 11.4655 11.537 12.6114 11.537 14.0255V17.44C11.537 18.8532 12.6732 20 14.0755 20H17.4615C18.8637 20 20 18.8532 20 17.44V14.0255C20 12.6114 18.8637 11.4655 17.4615 11.4655Z"
-          fill={color1}
+          fill={colorTwo}
         />
       </svg>
     );
@@ -173,7 +172,7 @@ const Dashboard = () => {
       <div className="w-2/12 border-r-[1px] border-gray-100 h-screen">
         <h1 className="text-6xl font-bold text-center mt-10 mb-40">core.</h1>
         <div className="">
-          <Dashboard color={"#200E32"} color1={"#C0CCDA"} />
+          <DashboardIcon color={"#200E32"} colorTwo={"#C0CCDA"} />
         </div>
       </div>
       {/* MAIN WALLET */}
@@ -218,7 +217,10 @@ const Dashboard = () => {
               <span className="text-xl pe-2 pt-[1.5px]">N</span>
               <p className="walletDigits text-3xl">140,020,500.00</p>
             </div>
-            <div className="rounded-xl p-2 bg-slate-400 cursor-pointer">
+            <div className="rounded-xl p-2 bg-slate-400 cursor-pointer" 
+              style={{
+                filter: "blur(0.58px)"
+              }}>
               <AiOutlinePlus
                 color="white"
                 className="bold"
@@ -259,7 +261,7 @@ const Dashboard = () => {
                 <CardlessIcon color={"#4ADE80"} />
               </div>
               <div className="m-auto">
-                <div className="ps-1">Cardless Withdrawal</div>
+                <div className="ps-3">Cardless Withdrawal</div>
               </div>
             </div>
             <div className="m-auto px-3">
@@ -269,8 +271,8 @@ const Dashboard = () => {
         </div>
       </div>
       {/* RIGHT SIDE NAV */}
-      <div className="w-3/12 mt-4 mr-8 border-l-[1px] border-gray-100 h-screen">
-        <div className="flex justify-end mb-9">
+      <div className="w-3/12 mt-4 border-l-[1px] border-gray-100 h-screen">
+        <div className="flex justify-end mb-9 mr-4">
           <div className="inline-flex rounded-lg bg-gray-50">
             <div className="p-1 m-3 rounded-lg bg-[#FFFFFF;]">
               <IoNotifications
