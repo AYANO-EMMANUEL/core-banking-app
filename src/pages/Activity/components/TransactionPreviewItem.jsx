@@ -22,7 +22,7 @@ const TransactionPreviewItem = ({
   });
 
   return (
-    <tr>
+    <tr className="transition-hover duration-300 hover:bg-gray-200 cursor-pointer">
       {/* Display the first column based on the transaction type */}
       <td className="p-3">
         {type === "transfer" && (

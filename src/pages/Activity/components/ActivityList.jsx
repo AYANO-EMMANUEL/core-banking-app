@@ -1,4 +1,3 @@
-import { IoArrowUpCircle } from "react-icons/io5";
 import TransactionPreviewItem from "./TransactionPreviewItem";
 
 const ActivityList = () => {
