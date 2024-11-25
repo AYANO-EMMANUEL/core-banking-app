@@ -1,11 +1,13 @@
-import { AiOutlinePlus, AiTwotonePicture } from "react-icons/ai";
+/* eslint-disable react/prop-types */
+import { AiOutlinePlus } from "react-icons/ai";
 import { BiDotsVerticalRounded } from "react-icons/bi";
 import { CgProfile } from "react-icons/cg";
-import { FaCube, FaGraduationCap } from "react-icons/fa";
+import { FaGraduationCap } from "react-icons/fa";
 import { GiPlayButton } from "react-icons/gi";
-import { IoMdHelp } from "react-icons/io";
 import { IoNotifications } from "react-icons/io5";
-import { RiBankFill, RiWallet3Fill, RiWallet3Line } from "react-icons/ri";
+import { RiBankFill } from "react-icons/ri";
+import Sidebar from "../../components/Sidebar";
+import TopRightMenu from "../../components/TopRightMenu";
 
 const Dashboard = () => {
   const Naira = ({ color, styles }) => {
@@ -23,14 +25,14 @@ const Dashboard = () => {
           fill={color}
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M0 6.36819C0 5.77883 0.473422 5.30106 1.05742 5.30106H15.1563C15.7403 5.30106 16.2137 5.77883 16.2137 6.36819C16.2137 6.95755 15.7403 7.43532 15.1563 7.43532H1.05742C0.473422 7.43532 0 6.95755 0 6.36819Z"
           fill={color}
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M0 9.92514C0 9.33578 0.473422 8.85801 1.05742 8.85801H15.1563C15.7403 8.85801 16.2137 9.33578 16.2137 9.92514C16.2137 10.5145 15.7403 10.9923 15.1563 10.9923H1.05742C0.473422 10.9923 0 10.5145 0 9.92514Z"
           fill={color}
         />
@@ -38,7 +40,7 @@ const Dashboard = () => {
     );
   };
 
-  const CardlessIcon = ({ color, styles }) => {
+  const CardlessIcon = ({ color }) => {
     return (
       <svg
         width="55"
@@ -111,8 +113,8 @@ const Dashboard = () => {
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M31.24 17.905L31.2509 17.5003L30.9776 7.33707C30.9738 7.19754 30.9641 7.05944 30.9487 6.92302L30.9357 6.79918C30.7985 5.43259 30.0407 4.24088 28.9374 3.5236C28.8521 3.46674 28.7648 3.41267 28.6755 3.36152C28.5909 3.31149 28.5045 3.26406 28.4164 3.21931C27.8728 2.93282 27.2662 2.74712 26.6206 2.68769C22.2165 2.28229 17.7844 2.28229 13.3803 2.68769C12.7337 2.74721 12.1262 2.93341 11.5819 3.22068C11.4938 3.26549 11.4074 3.313 11.3228 3.36309C11.2363 3.41275 11.1516 3.46516 11.0688 3.5202C9.95962 4.23908 9.19849 5.43701 9.06414 6.81052L9.05921 6.85775L9.05299 6.91635C9.03712 7.05494 9.02716 7.19526 9.02334 7.33706L8.75 17.5003L8.76094 17.9069L8.7501 18.3336L8.76044 18.7407L8.75018 19.1669L8.75993 19.5723L8.75015 20.0003L9.02078 31.8386C9.085 34.6474 11.2213 36.9735 14.0145 37.276C17.9935 37.7069 22.0074 37.7069 25.9865 37.276C28.7797 36.9735 30.9159 34.6474 30.9802 31.8386L31.2508 20.0003L31.2411 19.5751L31.2509 19.1669L31.2406 18.739L31.2509 18.3336L31.24 17.905ZM28.5072 14.8629L28.4576 7.20143C28.457 7.17699 28.456 7.15266 28.4545 7.12844C28.3555 6.45765 27.9668 5.87863 27.4156 5.5271C27.207 5.41838 26.9755 5.34627 26.7293 5.31961C22.2565 4.83522 17.7445 4.83522 13.2717 5.31961C13.0253 5.34628 12.7938 5.41843 12.5851 5.52723C12.0341 5.87867 11.6456 6.45742 11.5465 7.12788C11.545 7.15228 11.544 7.1768 11.5434 7.20142L11.4937 14.8629C11.5414 16.6352 12.9066 18.092 14.672 18.2545C18.2168 18.5808 21.7841 18.5808 25.3289 18.2545C27.0943 18.092 28.4595 16.6352 28.5072 14.8629ZM12.5005 20C12.0403 20 11.6672 20.3731 11.6672 20.8333C11.6672 21.2936 12.0403 21.6667 12.5005 21.6667H14.1672C14.6274 21.6667 15.0005 21.2936 15.0005 20.8333C15.0005 20.3731 14.6274 20 14.1672 20H12.5005ZM11.6672 25.8333C11.6672 25.3731 12.0403 25 12.5005 25H14.1672C14.6274 25 15.0005 25.3731 15.0005 25.8333C15.0005 26.2936 14.6274 26.6667 14.1672 26.6667H12.5005C12.0403 26.6667 11.6672 26.2936 11.6672 25.8333ZM12.5005 30C12.0403 30 11.6672 30.3731 11.6672 30.8333C11.6672 31.2936 12.0403 31.6667 12.5005 31.6667H14.1672C14.6274 31.6667 15.0005 31.2936 15.0005 30.8333C15.0005 30.3731 14.6274 30 14.1672 30H12.5005ZM18.3338 20.8333C18.3338 20.3731 18.7069 20 19.1672 20H20.8338C21.2941 20 21.6672 20.3731 21.6672 20.8333C21.6672 21.2936 21.2941 21.6667 20.8338 21.6667H19.1672C18.7069 21.6667 18.3338 21.2936 18.3338 20.8333ZM19.1672 25C18.7069 25 18.3338 25.3731 18.3338 25.8333C18.3338 26.2936 18.7069 26.6667 19.1672 26.6667H20.8338C21.2941 26.6667 21.6672 26.2936 21.6672 25.8333C21.6672 25.3731 21.2941 25 20.8338 25H19.1672ZM18.3338 30.8333C18.3338 30.3731 18.7069 30 19.1672 30H20.8338C21.2941 30 21.6672 30.3731 21.6672 30.8333C21.6672 31.2936 21.2941 31.6667 20.8338 31.6667H19.1672C18.7069 31.6667 18.3338 31.2936 18.3338 30.8333ZM25.8338 20C25.3736 20 25.0005 20.3731 25.0005 20.8333C25.0005 21.2936 25.3736 21.6667 25.8338 21.6667H27.5005C27.9607 21.6667 28.3338 21.2936 28.3338 20.8333C28.3338 20.3731 27.9607 20 27.5005 20H25.8338ZM25.0005 25.8333C25.0005 25.3731 25.3736 25 25.8338 25H27.5005C27.9607 25 28.3338 25.3731 28.3338 25.8333C28.3338 26.2936 27.9607 26.6667 27.5005 26.6667H25.8338C25.3736 26.6667 25.0005 26.2936 25.0005 25.8333ZM25.8338 30C25.3736 30 25.0005 30.3731 25.0005 30.8333C25.0005 31.2936 25.3736 31.6667 25.8338 31.6667H27.5005C27.9607 31.6667 28.3338 31.2936 28.3338 30.8333C28.3338 30.3731 27.9607 30 27.5005 30H25.8338Z"
           fill={color}
         />
@@ -130,8 +132,8 @@ const Dashboard = () => {
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M9.02122 1.34657C14.6633 0.856116 20.3372 0.856116 25.9793 1.34657L28.6851 1.58178C31.2742 1.80685 33.3716 3.77704 33.7581 6.34699C34.5709 11.7519 34.5709 17.248 33.7581 22.653C33.687 23.1258 33.558 23.5783 33.3786 24.0034C33.2597 24.2853 32.8928 24.328 32.6871 24.1017L24.7653 15.3878C24.4074 14.994 23.8509 14.8486 23.3461 15.0169L18.8117 16.5283L12.2337 9.12809C11.9878 8.85149 11.6388 8.68853 11.2689 8.67766C10.8989 8.66679 10.5409 8.80897 10.2792 9.07065L1.47474 17.8751C1.20376 18.1461 0.741619 17.9736 0.720014 17.591C0.508175 13.8395 0.682301 10.0716 1.24239 6.34699C1.62885 3.77704 3.7263 1.80685 6.31538 1.58178L9.02122 1.34657ZM21.0836 9.125C21.0836 7.64073 22.2868 6.4375 23.7711 6.4375C25.2553 6.4375 26.4586 7.64073 26.4586 9.125C26.4586 10.6093 25.2553 11.8125 23.7711 11.8125C22.2868 11.8125 21.0836 10.6093 21.0836 9.125Z"
           fill={color}
         />
@@ -143,93 +145,16 @@ const Dashboard = () => {
     );
   };
 
-  // DASHBOARDS
-  const DashboardIcon = ({ color, colorTwo }) => {
-    return (
-      <svg
-        width="30"
-        height="30"
-        viewBox="0 0 20 20"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M14.0756 0H17.4616C18.8639 0 20.0001 1.14585 20.0001 2.55996V5.97452C20.0001 7.38864 18.8639 8.53449 17.4616 8.53449H14.0756C12.6734 8.53449 11.5371 7.38864 11.5371 5.97452V2.55996C11.5371 1.14585 12.6734 0 14.0756 0Z"
-          fill={color}
-        />
-        <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
-          d="M2.53852 0H5.92449C7.32676 0 8.46301 1.14585 8.46301 2.55996V5.97452C8.46301 7.38864 7.32676 8.53449 5.92449 8.53449H2.53852C1.13626 8.53449 0 7.38864 0 5.97452V2.55996C0 1.14585 1.13626 0 2.53852 0ZM2.53852 11.4655H5.92449C7.32676 11.4655 8.46301 12.6114 8.46301 14.0255V17.44C8.46301 18.8532 7.32676 20 5.92449 20H2.53852C1.13626 20 0 18.8532 0 17.44V14.0255C0 12.6114 1.13626 11.4655 2.53852 11.4655ZM17.4615 11.4655H14.0755C12.6732 11.4655 11.537 12.6114 11.537 14.0255V17.44C11.537 18.8532 12.6732 20 14.0755 20H17.4615C18.8637 20 20 18.8532 20 17.44V14.0255C20 12.6114 18.8637 11.4655 17.4615 11.4655Z"
-          fill={colorTwo}
-        />
-      </svg>
-    );
-  };
-
-  const ActivityIcon = ({ color, colorTwo }) => {
-    return (
-      <svg
-        width="35"
-        height="35"
-        viewBox="0 0 20 20"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
-          d="M13.2428 2.73756C13.2428 4.95855 15.0459 6.75902 17.2702 6.75902C17.5151 6.75782 17.7594 6.73431 18 6.68878V14.6615C18 18.0156 16.0215 20 12.6624 20H5.34636C1.97851 20 0 18.0156 0 14.6615V7.3561C0 4.00195 1.97851 2 5.34636 2H13.3131C13.2659 2.243 13.2423 2.49001 13.2428 2.73756ZM11.15 12.8966L14.0078 9.20878V9.19122C14.2525 8.86247 14.1901 8.39889 13.8671 8.14634C13.7108 8.02568 13.5122 7.97345 13.3167 8.00159C13.1211 8.02972 12.9453 8.1358 12.8295 8.29561L10.4201 11.3951L7.6766 9.23512C7.51997 9.11309 7.32071 9.05922 7.12381 9.08565C6.92691 9.11208 6.74898 9.2166 6.63019 9.37561L3.67562 13.1863C3.57177 13.3158 3.51586 13.4771 3.51734 13.6429C3.5002 13.9781 3.71187 14.2826 4.03238 14.3838C4.35288 14.485 4.70138 14.3573 4.88031 14.0732L7.35125 10.8771L10.0948 13.0283C10.2508 13.1541 10.4514 13.2111 10.6504 13.1863C10.8494 13.1615 11.0297 13.0569 11.15 12.8966Z"
-          fill={colorTwo}
-        />
-        <circle cx="17.5" cy="2.5" r="2.5" fill={color} />
-      </svg>
-    );
-  };
-
   return (
-    <div className="flex w-12/12 cursor-context-menu">
+    <div className="flex cursor-context-menu">
       {/* SIDEBAR NAV */}
-      <div className="w-2/12 border-r-[1px] border-gray-100 h-screen flex flex-col align-middle justify-between">
-        <h1 className="text-6xl font-bold ps-10 mt-10 mb-20">core.</h1>
-        <div className="flex-col space-y-4 mb-20">
-          <div className="cursor-pointer hover:bg-gray-100 hover:text-lg">
-            <div className="flex align-middle p-4 ps-10">
-              <DashboardIcon color={"#200E32"} colorTwo={"#C0CCDA"} />
-              <div className="ps-5 my-auto">Dashboard</div>
-            </div>
-          </div>
-          <div className="cursor-pointer hover:bg-gray-100 hover:text-lg">
-            <div className="flex align-middle p-4 ps-10">
-              <ActivityIcon color={"#200E32"} colorTwo={"#C0CCDA"} />
-              <div className="ps-5 my-auto">Activity</div>
-            </div>
-          </div>
-          <div className="cursor-pointer hover:bg-gray-100 hover:text-lg">
-            <div className="flex align-middle p-4 ps-10">
-              <RiWallet3Fill color={"#C0CCDA"} fill="#C0CCDA" size={"35"} />
-              <div className="ps-5 my-auto">Wallet</div>
-            </div>
-          </div>
-          <div className="cursor-pointer hover:bg-gray-100 hover:text-lg">
-            <div className="flex align-middle p-4 ps-10">
-              <FaCube color={"#C0CCDA"} size={"33"} />
-              <div className="ps-5 my-auto">Products</div>
-            </div>
-          </div>
-        </div>
-        <div className="help mt-auto pb-4">
-          <div className="flex align-middle justify-center mt-5">
-            <div className="bg-gray-300 p-2 rounded-3xl">
-              <IoMdHelp color="#200E32" className="m-auto" />
-            </div>
-            <div className="cursor-pointer ps-3 my-auto text-gray-400 hover:text-black">Help Center</div>
-          </div>
-        </div>
-      </div>
+      <Sidebar />
       {/* MAIN WALLET */}
-      <div className="w-7/12 mx-6 mt-12 mb-8">
-        <div className="text-5xl">Wallet</div>
+      <div className=" px-6 pt-12 mb-8 flex-[2.5] ">
+        <div className="flex justify-between align-middle">
+          <div className="text-5xl">Wallet</div>
+          <TopRightMenu styles='hidden'/>
+        </div>
         <div className="flex space-x-6 mb-3">
           <div className="flex">
             <div className="rounded-md p-3 m-auto bg-green-400">
@@ -325,30 +250,8 @@ const Dashboard = () => {
         </div>
       </div>
       {/* RIGHT SIDE NAV */}
-      <div className="w-3/12 mt-4 border-l-[1px] border-gray-100 h-screen">
-        <div className="flex justify-end mb-9 mr-4">
-          <div className="inline-flex rounded-lg bg-gray-50">
-            <div className="p-1 m-3 rounded-lg bg-[#FFFFFF;]">
-              <IoNotifications
-                size={"25"}
-                color="#231F20"
-                className="cursor-pointer"
-              />
-            </div>
-            <div className="flex align-middle">
-              <div className="p-1 m-auto rounded-lg bg-[#9DA8B6;]">
-                <CgProfile size={"25"} className="cursor-pointer" />
-              </div>
-              <div className="m-auto p-1 rounded-lg">
-                <BiDotsVerticalRounded
-                  size={"25"}
-                  color="#B2B2B2"
-                  className="cursor-pointer"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
+      <div className="flex-[1.25] pt-4 border-l-[1px] border-gray-100 h-screen hidden lg:block">
+        <TopRightMenu />
         <div className="border rounded-3xl mx-4 border-gray-100">
           <div className="flex justify-between">
             <div className="flex justify-around align-middle rounded-tl-3xl p-5 w-3/6 cursor-pointer">

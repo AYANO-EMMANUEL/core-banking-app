@@ -1,28 +1,23 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
-
-const TabSwitch = ({tab, text, switchTab, activeTab}) => {
-    return(<button
-      onClick={() => switchTab(tab)}
-      className={`rounded-lg px-4 py-2 text-sm ${
-        !(activeTab === tab)
-          ? "text-gray-500"
-          : "text-white bg-black"
-      }`}
-    >
-      <span>{text}</span>
-    </button>)
-  };
-
-
-const ActivityTabSwitcher = () => {
-  const [activeTab, setActiveTab] = useState("all");
+const ActivityTabSwitcher = ({activeTab, setActiveTab, transactions}) => {
 
     function switchTab(tab){
         setActiveTab(tab);
+        // console.log(transactions)
     }
 
-
+    const TabSwitch = ({tab, text, switchTab, activeTab}) => {
+      return(<button
+        onClick={() => switchTab(tab)}
+        className={`rounded-lg px-4 py-2 text-sm ${
+          !(activeTab === tab)
+            ? "text-gray-500"
+            : "text-white bg-black"
+        }`}
+      >
+        <span>{text}</span>
+      </button>)
+    };
 
   return (
     <div>
@@ -32,5 +27,6 @@ const ActivityTabSwitcher = () => {
     </div>
   );
 };
+
 
 export default ActivityTabSwitcher;
