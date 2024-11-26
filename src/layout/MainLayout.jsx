@@ -1,4 +1,4 @@
-import { Activity } from "lucide-react";
+import Activity from "../pages/Activity/Activity";
 import Dashboard from "../pages/Dashboard/Dashboard";
 import Sidebar from "../components/Sidebar";
 import { Route, Routes, Outlet } from "react-router-dom";
@@ -12,7 +12,7 @@ const MainLayout = () => {
       <div className="px-6 pt-12 mb-8 flex-[2.5]">
         <Routes>
           <Route path="/dashboard" exact element={<Dashboard />} />
-          <Route path="/activity" element={<Activity />} />
+          <Route path="/activity" element={<A  ctivity />} />
         </Routes>
       </div>
       <RightNav />
