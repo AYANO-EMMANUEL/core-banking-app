@@ -2,6 +2,7 @@
 import { FaCube } from "react-icons/fa";
 import { IoMdHelp } from "react-icons/io";
 import { RiWallet3Fill } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   const DashboardIcon = ({ color, colorTwo }) => {
@@ -48,43 +49,43 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="flex-1 border-r-[1px] border-gray-100 h-screen flex flex-col align-middle justify-between">
+    <div className="hidden md:flex flex-1 border-r-[1px] border-gray-100 h-screen flex-col align-middle justify-between">
       <h1 className="text-6xl font-bold mt-10 text-center mb-20">core.</h1>
       <div className="flex-col space-y-4 mb-20">
-        <div className="cursor-pointer hover:bg-gray-100 px-10">
+        <Link to={'/app'} className="cursor-pointer block hover:bg-gray-100 px-10">
           <div className="flex align-middle p-4">
             <DashboardIcon color={"#200E32"} colorTwo={"#C0CCDA"} />
             <div className="ps-5 my-auto">Dashboard</div>
           </div>
-        </div>
-        <div className="cursor-pointer hover:bg-gray-100 px-10">
+        </Link>
+        <Link to={'/app/activity'} className="cursor-pointer block hover:bg-gray-100 px-10">
           <div className="flex align-middle p-4">
             <ActivityIcon color={"#200E32"} colorTwo={"#C0CCDA"} />
             <div className="ps-5 my-auto">Activity</div>
           </div>
-        </div>
-        <div className="cursor-pointer hover:bg-gray-100 px-10">
+        </Link>
+        <Link to={'/app/wallet'} className="cursor-pointer block hover:bg-gray-100 px-10">
           <div className="flex align-middle p-4">
             <RiWallet3Fill color={"#C0CCDA"} fill="#C0CCDA" size={"35"} />
             <div className="ps-5 my-auto">Wallet</div>
           </div>
-        </div>
-        <div className="cursor-pointer hover:bg-gray-100 px-10">
+        </Link>
+        <Link to={'/app/products'} className="cursor-pointer block hover:bg-gray-100 px-10">
           <div className="flex align-middle p-4">
             <FaCube color={"#C0CCDA"} size={"33"} />
             <div className="ps-5 my-auto">Products</div>
           </div>
-        </div>
+        </Link>
       </div>
       <div className="help mt-auto pb-4">
-        <div className="flex align-middle justify-center mt-5">
+        <Link to={'/app/help'} className="flex align-middle justify-center mt-5">
           <div className="bg-gray-300 p-2 rounded-3xl">
             <IoMdHelp color="#200E32" className="m-auto" />
           </div>
-          <div className="cursor-pointer ps-3 my-auto text-gray-400 hover:text-black">
+          <div className="cursor-pointer block ps-3 my-auto text-gray-400 hover:text-black">
             Help Center
           </div>
-        </div>
+        </Link>
       </div>
     </div>
   );
