@@ -1,12 +1,6 @@
 /* eslint-disable react/prop-types */
 import { AiOutlinePlus } from "react-icons/ai";
-import { BiDotsVerticalRounded } from "react-icons/bi";
-import { CgProfile } from "react-icons/cg";
-import { FaGraduationCap } from "react-icons/fa";
 import { GiPlayButton } from "react-icons/gi";
-import { IoNotifications } from "react-icons/io5";
-import { RiBankFill } from "react-icons/ri";
-import Sidebar from "../../components/Sidebar";
 import TopRightMenu from "../../components/TopRightMenu";
 import RightNav from "../../components/RightNav";
 
@@ -194,7 +188,7 @@ const Dashboard = () => {
               <p className="walletDigits text-3xl">140,020,500.00</p>
             </div>
             <div
-              className="rounded-xl p-2 bg-slate-400 cursor-pointer"
+              className="rounded-xl p-2 bg-black cursor-pointer"
               style={{
                 filter: "blur(0.58px)",
               }}
