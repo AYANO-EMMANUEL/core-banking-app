@@ -8,6 +8,7 @@ import { IoNotifications } from "react-icons/io5";
 import { RiBankFill } from "react-icons/ri";
 import Sidebar from "../../components/Sidebar";
 import TopRightMenu from "../../components/TopRightMenu";
+import RightNav from "../../components/RightNav";
 
 const Dashboard = () => {
   const Naira = ({ color, styles }) => {
@@ -146,13 +147,12 @@ const Dashboard = () => {
   };
 
   return (
-    <div className=" cursor-context-menu">
-      
+    <div className="flex cursor-context-menu">
       {/* MAIN WALLET */}
-      <div className="">
+      <div className="flex-[2] px-6 pt-12">
         <div className="flex justify-between align-middle">
           <div className="text-5xl">Wallet</div>
-          <TopRightMenu styles='hidden'/>
+          <TopRightMenu styles="hidden" />
         </div>
         <div className="flex space-x-6 mb-3">
           <div className="flex">
@@ -247,6 +247,9 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="flex-[1.5] lg:flex-[1.1]">
+        <RightNav />
       </div>
     </div>
   );

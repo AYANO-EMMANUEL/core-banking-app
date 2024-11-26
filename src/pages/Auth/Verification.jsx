@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const OTPVerification = () => {
+const Verification = () => {
   const [otp, setOtp] = useState(new Array(5).fill(''));
   const [isComplete, setIsComplete] = useState(false);
   const [timer, setTimer] = useState(30);
@@ -106,4 +106,4 @@ const OTPVerification = () => {
   );
 };
 
-export default OTPVerification;
+export default Verification;

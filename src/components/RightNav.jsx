@@ -7,7 +7,7 @@ import { CardIcon } from '../constants'
 
 const RightNav = () => {
   return (
-    <div className=" flex-[1.5] lg:flex-[1.25] pt-4 border-l-[1px] border-gray-100 h-screen hidden lg:block">
+    <div className="pt-4 border-l-[1px] border-gray-100 h-screen hidden lg:block">
         <TopRightMenu />
         <div className="border rounded-3xl mx-4 border-gray-100">
           <div className="flex justify-between">
