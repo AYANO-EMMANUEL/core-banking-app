@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-const ActivityTabSwitcher = ({activeTab, setActiveTab, transactions}) => {
+const ActivityTabSwitcher = ({activeTab, setActiveTab}) => {
 
     function switchTab(tab){
         setActiveTab(tab);

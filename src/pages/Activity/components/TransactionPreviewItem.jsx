@@ -30,14 +30,16 @@ const TransactionPreviewItem = ({
             <img
               src="/assets/cards.png"
               alt="Transaction icon"
-              className="rounded-full w-8 md:w-12 object-cover shadow-md aspect-square"
+              className="rounded-full w-8 md:w-12 object-cover shadow-md aspect-square hidden lg:block"
             />
             <div>
-              <h3 className="text-sm md:text-base">
+              <h3 className="text-sm md:text-base truncate max-w-[20vw]">
                 Transfer to{" "}
                 <span className="uppercase font-bold">{recipient}</span>
               </h3>
-              <p className="text-xs text-gray-400">ID: {transactionId}</p>
+              <p className="text-xs text-gray-400 hidden lg:block">
+                ID: {transactionId}
+              </p>
             </div>
           </div>
         )}
@@ -46,21 +48,38 @@ const TransactionPreviewItem = ({
             <img
               src="https://hallmarknews.com/wp-content/uploads/2023/11/Compress_20231117_094424_4513.png"
               alt=""
-              className="shadow-md rounded-full w-8 md:w-12 object-cover aspect-square"
+              className="shadow-md rounded-full w-8 md:w-12 object-cover aspect-square hidden lg:block"
             />
-            <h3 className="text-sm md:text-base">Airtime</h3>
+            <div>
+              <h3 className="text-sm md:text-base truncate max-w-[20vw]">Airtime</h3>
+              <p className="text-xs text-gray-400 hidden lg:block">
+                ID: {transactionId}
+              </p>
+            </div>
           </div>
         )}
         {type === "deposit" && (
           <div className="flex gap-2 items-center ">
-            <PiBankBold className=" w-8 md:w-12 h-8 md:h-12 object-cover aspect-square" />
-            <h3 className="text-sm md:text-base">Bank Deposit</h3>
+            <PiBankBold className=" w-8 md:w-12 h-8 md:h-12 object-cover aspect-square hidden lg:block" />
+            <div>
+              <h3 className="text-sm md:text-base truncate max-w-[20vw]">Bank Deposit</h3>
+              <p className="text-xs text-gray-400 hidden lg:block">
+                ID: {transactionId}
+              </p>
+            </div>
           </div>
         )}
         {type === "subscription" && (
           <div className="flex gap-2 items-center ">
-            <HandCoins className=" w-8 md:w-12 h-8 md:h-12 object-cover aspect-square" />
-            <h3 className="text-sm md:text-base">Netflix Premium Subscription</h3>
+            <HandCoins className=" w-8 md:w-12 h-8 md:h-12 object-cover aspect-square hidden lg:block" />
+            <div>
+              <h3 className="text-sm md:text-base truncate max-w-[20vw]">
+                Netflix Premium Subscription
+              </h3>
+              <p className="text-xs text-gray-400 hidden lg:block">
+                ID: {transactionId}
+              </p>
+            </div>
           </div>
         )}
       </td>
@@ -68,7 +87,9 @@ const TransactionPreviewItem = ({
       {/* Display Date and Time */}
       <td className="p-2 md:p-3">
         <div>
-          <p className="text-xs md:text-sm font-semibold text-dark">{formattedDate}</p>
+          <p className="text-xs md:text-sm font-semibold text-dark">
+            {formattedDate}
+          </p>
           <p className="text-xs text-gray-400">{formattedTime}</p>
         </div>
       </td>
@@ -87,8 +108,9 @@ const TransactionPreviewItem = ({
           ) : (
             <IoArrowDownCircle className="inline mr-2" />
           )}
-          <span className="hidden md:inline">{entry[0].toUpperCase() + entry.slice(1)}</span>
-          
+          <span className="hidden md:inline">
+            {entry[0].toUpperCase() + entry.slice(1)}
+          </span>
         </p>
       </td>
 
@@ -96,7 +118,7 @@ const TransactionPreviewItem = ({
       <td className="p-3">NGN {amount.toLocaleString()}</td>
 
       {/* Display Status */}
-      <td className="p-3">
+      <td className="p-3 hidden lg:table-cell">
         <p
           className={`mx-auto md:mx-0 aspect-square md:aspect-auto px-2 py-1 rounded-xl text-sm w-fit ${
             status === "Successful"
@@ -106,9 +128,7 @@ const TransactionPreviewItem = ({
               : "bg-red-300 text-red-600"
           }`}
         >
-          <span className="hidden md:inline">
-            {status}
-          </span>
+          <span className="hidden md:inline">{status}</span>
         </p>
       </td>
     </tr>
