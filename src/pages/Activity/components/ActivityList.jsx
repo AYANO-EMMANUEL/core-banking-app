@@ -9,7 +9,7 @@ const ActivityList = ({ transactions, activeTab }) => {
           <tr className="bg-gray-200">
             <th className="text-start p-3">Transaction name</th>
             <th className="text-start p-3">Date</th>
-            <th className="text-start p-3">Type</th>
+            <th className="text-start p-3 hidden lg:table-cell">Type</th>
             <th className="text-start p-3">Amount</th>
             <th className="text-start p-3">Status</th>
           </tr>
