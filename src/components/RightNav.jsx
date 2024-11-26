@@ -8,7 +8,7 @@ import { CardIcon } from '../constants'
 const RightNav = () => {
   return (
     <div className="pt-4 border-l-[1px] border-gray-100 h-screen">
-        <TopRightMenu />
+        <TopRightMenu styles={'mr-4'}/>
         <div className="border rounded-3xl mx-4 border-gray-100">
           <div className="flex justify-between">
             <div className="flex justify-around align-middle rounded-tl-3xl p-5 w-3/6 cursor-pointer">

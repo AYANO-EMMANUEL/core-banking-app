@@ -5,7 +5,7 @@ import { IoNotifications } from "react-icons/io5";
 
 const TopRightMenu = ({ styles }) => {
   return (
-    <div className={`flex justify-end mb-9 mr-4 ${styles}`}>
+    <div className={`flex justify-end mb-9 ${styles}`}>
       <div className="inline-flex rounded-lg bg-gray-50">
         <div className="p-1 m-3 rounded-lg bg-[#FFFFFF;]">
           <IoNotifications

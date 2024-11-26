@@ -95,7 +95,7 @@ const TransactionPreviewItem = ({
       </td>
 
       {/* Display Transaction Direction */}
-      <td className="p-3">
+      <td className="p-3 hidden lg:table-cell">
         <p
           className={
             entry === "outgoing"
@@ -118,7 +118,7 @@ const TransactionPreviewItem = ({
       <td className="p-3">NGN {amount.toLocaleString()}</td>
 
       {/* Display Status */}
-      <td className="p-3 hidden lg:table-cell">
+      <td className="p-3">
         <p
           className={`mx-auto md:mx-0 aspect-square md:aspect-auto px-2 py-1 rounded-xl text-sm w-fit ${
             status === "Successful"
