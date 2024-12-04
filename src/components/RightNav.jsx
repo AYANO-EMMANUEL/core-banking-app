@@ -9,7 +9,7 @@ const RightNav = () => {
   return (
     <div className="pt-4 border-l-[1px] border-gray-100 h-screen">
         <TopRightMenu styles={'mr-4'}/>
-        <div className="border rounded-3xl mx-4 border-gray-100">
+        <div className="border rounded-3xl ml-0 mr-4 xl:mx-4 border-gray-100">
           <div className="flex justify-between">
             <div className="flex justify-around align-middle rounded-tl-3xl p-5 w-3/6 cursor-pointer">
               Deposit
@@ -24,7 +24,7 @@ const RightNav = () => {
             </div>
             <div className="mb-4 cursor-pointer">
               <div
-                className="flex align-middle p-2 border-gray-100 rounded-3xl hover:border-none hover:shadow-md"
+                className="flex align-middle p-1 xl:p-2 border-gray-100 rounded-3xl hover:border-none hover:shadow-md"
                 style={{
                   filter: "blur(0.76px)",
                   opacity: "0.9",
@@ -42,7 +42,7 @@ const RightNav = () => {
             </div>
             <div className="mb-4 cursor-pointer">
               <div
-                className="flex align-middle p-2 border-gray-100 rounded-3xl hover:border-none hover:shadow-md"
+                className="flex align-middle p-1 xl:p-2 border-gray-100 rounded-3xl hover:border-none hover:shadow-md"
                 style={{
                   filter: "blur(0.76px)",
                   opacity: "0.9",
@@ -60,7 +60,7 @@ const RightNav = () => {
             </div>
             <div className="mb-4 cursor-pointer">
               <div
-                className="flex align-middle p-2 border-gray-100 rounded-3xl hover:shadow-md"
+                className="flex align-middle p-1 xl:p-2 border-gray-100 rounded-3xl hover:shadow-md"
                 style={{
                   filter: "blur(0.76px)",
                   opacity: "0.9",

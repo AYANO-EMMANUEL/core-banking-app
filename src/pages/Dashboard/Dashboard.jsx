@@ -153,14 +153,14 @@ const Dashboard = () => {
             <div className="rounded-md p-3 m-auto bg-green-400">
               <Naira color={"white"} />
             </div>
-            <div className="m-auto p-4">
+            <div className="m-auto ps-4 truncate max-w-[20vw]">
               <div className="accountName">Apostle Trump</div>
               <div className="kycLevel opacity-[0.6]">KYC Level 1</div>
             </div>
           </div>
           <div className="flex space-x-10 hover:border-gray-100 hover:shadow-md border-[0.5px] border-t-0 border-l-0 rounded-3xl hover:rounded-3xl hover:drop-shadow-md cursor-pointer">
             <div className="flex align-middle ps-4">
-              <div className="rounded-md p-3 m-auto bg-green-40">
+              <div className="rounded-md pr-3 m-auto bg-green-40">
                 <CardlessIcon color={"#4ADE80"} />
               </div>
               <div className="m-auto">
@@ -174,7 +174,7 @@ const Dashboard = () => {
         </div>
         {/* WALLET BOX SHADOW */}
         <div
-          className="rounded-3xl bg-green-400 cursor-context-menu walletBg text-white p-8 py-12 mb-3"
+          className="rounded-3xl bg-green-400 cursor-context-menu walletBg text-white p-6 py-10 mb-2"
           style={{
             filter: "blur(0.76px)",
             opacity: "0.9",
@@ -215,7 +215,7 @@ const Dashboard = () => {
         <div className="flex space-x-6 my-6">
           <div className="flex justify-between w-3/6 border-gray-100 border-[1.5px] hover:border-none hover:shadow-md rounded-3xl cursor-pointer">
             <div className="flex align-middle ps-4">
-              <div className="rounded-md p-3 m-auto bg-green-40">
+              <div className="rounded-md p-1 m-auto bg-green-40">
                 <RequestMoneyIcon color={"#4ADE80"} />
               </div>
               <div className="m-auto">
@@ -229,7 +229,7 @@ const Dashboard = () => {
           {/* WITHDRAWAL CARD BOX */}
           <div className="flex justify-between w-3/6 border-gray-100 border-[1.5px] hover:border-none hover:shadow-md rounded-3xl cursor-pointer">
             <div className="flex align-middle ps-4">
-              <div className="rounded-md p-3 m-auto bg-green-40">
+              <div className="rounded-md p-1 m-auto bg-green-40">
                 <CardlessIcon color={"#4ADE80"} />
               </div>
               <div className="m-auto">
