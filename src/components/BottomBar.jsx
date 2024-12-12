@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import { FaCube } from "react-icons/fa";
-import { IoMdHelp } from "react-icons/io";
 import { RiWallet3Fill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 

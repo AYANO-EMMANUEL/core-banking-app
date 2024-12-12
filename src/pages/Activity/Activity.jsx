@@ -53,8 +53,7 @@ const Activity = () => {
   ]);
 
   return (
-    <div className="w-full px-6 pt-12 flex-[2.5]">
-      <h1 className="text-3xl font-semibold mb-10">Recent Activity</h1>
+    <div className="w-full flex-[2.5]">
       <ActivityTabSwitcher
         activeTab={activeTab}
         setActiveTab={setActiveTab}
