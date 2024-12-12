@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { FaCube } from "react-icons/fa";
+import { FcSettings } from "react-icons/fc";
 import { IoMdHelp } from "react-icons/io";
 import { RiWallet3Fill } from "react-icons/ri";
 import { Link } from "react-router-dom";
@@ -64,21 +65,21 @@ const Sidebar = () => {
             <div className="ps-5 my-auto">Activity</div>
           </div>
         </Link>
-        <Link to={'/app/wallet'} className="cursor-pointer block hover:bg-gray-100 px-10">
-          <div className="flex align-middle p-4">
-            <RiWallet3Fill color={"#C0CCDA"} fill="#C0CCDA" size={"35"} />
-            <div className="ps-5 my-auto">Wallet</div>
-          </div>
-        </Link>
         <Link to={'/app/products'} className="cursor-pointer block hover:bg-gray-100 px-10">
           <div className="flex align-middle p-4">
             <FaCube color={"#C0CCDA"} size={"33"} />
             <div className="ps-5 my-auto">Products</div>
           </div>
         </Link>
+        <Link to={'/app/wallet'} className="cursor-pointer block hover:bg-gray-100 px-10">
+          <div className="flex align-middle p-4">
+            <FcSettings color={"#C0CCDA"} fill="#C0CCDA" size={"35"} />
+            <div className="ps-5 my-auto">Settings</div>
+          </div>
+        </Link>
       </div>
       <div className="help mt-auto pb-4">
-        <Link to={'/app/help'} className="flex align-middle justify-center mt-5">
+        <Link to={'/app/help'} className="flex align-middle ps-14 mt-5">
           <div className="bg-gray-300 p-2 rounded-3xl">
             <IoMdHelp color="#200E32" className="m-auto" />
           </div>
