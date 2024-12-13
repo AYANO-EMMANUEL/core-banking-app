@@ -141,105 +141,111 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="flex cursor-context-menu">
-      {/* MAIN WALLET */}
-      <div className="flex-[2]">
-        <div className="flex space-x-6 mb-3">
-          <div className="flex">
-            <div className="rounded-md p-3 m-auto bg-green-400">
-              <Naira color={"white"} />
-            </div>
-            <div className="m-auto ps-4 truncate max-w-[20vw]">
-              <div className="accountName">Apostle Trump</div>
-              <div className="kycLevel opacity-[0.6]">KYC Level 1</div>
-            </div>
+    <div>
+      <div className="flex cursor-context-menu">
+        {/* MAIN WALLET */}
+        <div className="flex-[2] px-6 pt-10">
+          <div className="flex justify-between align-middle items-center mb-6">
+            <div className="text-3xl md:text-5xl">Wallet</div>
+            <TopRightMenu styles="block lg:hidden" />
           </div>
-          <div className="flex space-x-10 hover:border-gray-100 hover:shadow-md border-[0.5px] border-t-0 border-l-0 rounded-3xl hover:rounded-3xl hover:drop-shadow-md cursor-pointer">
-            <div className="flex align-middle ps-4">
-              <div className="rounded-md pr-3 m-auto bg-green-40">
-                <CardlessIcon color={"#4ADE80"} />
+          <div className="flex space-x-6 mb-3">
+            <div className="flex">
+              <div className="rounded-md p-3 m-auto bg-green-400">
+                <Naira color={"white"} />
               </div>
-              <div className="m-auto">
-                <div className="kycLevelNext">Upgrade KYC Level 2</div>
+              <div className="m-auto ps-4 truncate max-w-[20vw]">
+                <div className="accountName">Apostle Trump</div>
+                <div className="kycLevel opacity-[0.6]">KYC Level 1</div>
               </div>
             </div>
-            <div className="m-auto px-4">
-              <GiPlayButton fill="#4ADE80" color="#4ADE80" />
+            <div className="flex space-x-10 hover:border-gray-100 hover:shadow-md border-[0.5px] border-t-0 border-l-0 rounded-3xl hover:rounded-3xl hover:drop-shadow-md cursor-pointer">
+              <div className="flex align-middle ps-4">
+                <div className="rounded-md pr-3 m-auto bg-green-40">
+                  <CardlessIcon color={"#4ADE80"} />
+                </div>
+                <div className="m-auto">
+                  <div className="kycLevelNext">Upgrade KYC Level 2</div>
+                </div>
+              </div>
+              <div className="m-auto px-4">
+                <GiPlayButton fill="#4ADE80" color="#4ADE80" />
+              </div>
             </div>
           </div>
-        </div>
-        {/* WALLET BOX SHADOW */}
-        <div
-          className="rounded-3xl bg-green-400 cursor-context-menu walletBg text-white p-6 py-10 mb-2"
-          style={{
-            filter: "blur(0.76px)",
-            opacity: "0.9",
-            boxShadow: "0px 18px 3px -10px rgba(0,0,0,0.15)",
-          }}
-        >
-          <h4 className="">Total Balance</h4>
-          <div className="flex justify-between pb-1">
-            <div className="flex align-top">
-              <span className="text-xl pe-2 pt-[1.5px]">N</span>
-              <p className="walletDigits text-3xl">140,020,500.00</p>
-            </div>
-            <div
-              className="rounded-xl p-2 bg-black cursor-pointer"
-              style={{
-                filter: "blur(0.58px)",
-              }}
-            >
-              <AiOutlinePlus
-                color="white"
-                className="bold"
-                size={"20"}
+          {/* WALLET BOX SHADOW */}
+          <div
+            className="rounded-3xl bg-green-400 cursor-context-menu walletBg text-white p-6 py-10 mb-2"
+            style={{
+              filter: "blur(0.76px)",
+              opacity: "0.9",
+              boxShadow: "0px 18px 3px -10px rgba(0,0,0,0.15)",
+            }}
+          >
+            <h4 className="">Total Balance</h4>
+            <div className="flex justify-between pb-1">
+              <div className="flex align-top">
+                <span className="text-xl pe-2 pt-[1.5px]">N</span>
+                <p className="walletDigits text-3xl">140,020,500.00</p>
+              </div>
+              <div
+                className="rounded-xl p-2 bg-black cursor-pointer"
                 style={{
-                  strokeWidth: "7",
-                  filter:
-                    "drop-shadow(0.5px 0.5px 0 white) drop-shadow(-0.5px -0.5px 0 white)",
+                  filter: "blur(0.58px)",
                 }}
-              />
+              >
+                <AiOutlinePlus
+                  color="white"
+                  className="bold"
+                  size={"20"}
+                  style={{
+                    strokeWidth: "7",
+                    filter:
+                      "drop-shadow(0.5px 0.5px 0 white) drop-shadow(-0.5px -0.5px 0 white)",
+                  }}
+                />
+              </div>
+            </div>
+            <div className="text-sm" style={{ fontSize: "bold" }}>
+              Book Balance:
+              <span className="opacity-[0.7]"> ₦ </span>
+              1,000,000.00
             </div>
           </div>
-          <div className="text-sm" style={{ fontSize: "bold" }}>
-            Book Balance:
-            <span className="opacity-[0.7]"> ₦ </span>
-            1,000,000.00
+          {/* REQ & SEND BOX */}
+          <div className="flex space-x-6 my-6">
+            <div className="flex justify-between w-3/6 border-gray-100 border-[1.5px] hover:border-none hover:shadow-md rounded-3xl cursor-pointer">
+              <div className="flex align-middle ps-4">
+                <div className="rounded-md p-1 m-auto bg-green-40">
+                  <RequestMoneyIcon color={"#4ADE80"} />
+                </div>
+                <div className="m-auto">
+                  <div className="ps-3">Request Money</div>
+                </div>
+              </div>
+              <div className="m-auto mr-10">
+                <GiPlayButton fill="#C8E2DE" color="#C8E2DE" />
+              </div>
+            </div>
+            {/* WITHDRAWAL CARD BOX */}
+            <div className="flex justify-between w-3/6 border-gray-100 border-[1.5px] hover:border-none hover:shadow-md rounded-3xl cursor-pointer">
+              <div className="flex align-middle ps-4">
+                <div className="rounded-md p-1 m-auto bg-green-40">
+                  <CardlessIcon color={"#4ADE80"} />
+                </div>
+                <div className="m-auto">
+                  <div className="ps-3">Cardless Withdrawal</div>
+                </div>
+              </div>
+              <div className="m-auto px-3">
+                <GiPlayButton fill="#4ADE80" color="#4ADE80" />
+              </div>
+            </div>
           </div>
         </div>
-        {/* REQ & SEND BOX */}
-        <div className="flex space-x-6 my-6">
-          <div className="flex justify-between w-3/6 border-gray-100 border-[1.5px] hover:border-none hover:shadow-md rounded-3xl cursor-pointer">
-            <div className="flex align-middle ps-4">
-              <div className="rounded-md p-1 m-auto bg-green-40">
-                <RequestMoneyIcon color={"#4ADE80"} />
-              </div>
-              <div className="m-auto">
-                <div className="ps-3">Request Money</div>
-              </div>
-            </div>
-            <div className="m-auto mr-10">
-              <GiPlayButton fill="#C8E2DE" color="#C8E2DE" />
-            </div>
-          </div>
-          {/* WITHDRAWAL CARD BOX */}
-          <div className="flex justify-between w-3/6 border-gray-100 border-[1.5px] hover:border-none hover:shadow-md rounded-3xl cursor-pointer">
-            <div className="flex align-middle ps-4">
-              <div className="rounded-md p-1 m-auto bg-green-40">
-                <CardlessIcon color={"#4ADE80"} />
-              </div>
-              <div className="m-auto">
-                <div className="ps-3">Cardless Withdrawal</div>
-              </div>
-            </div>
-            <div className="m-auto px-3">
-              <GiPlayButton fill="#4ADE80" color="#4ADE80" />
-            </div>
-          </div>
+        <div className="flex-[1.5] lg:flex-[1.1] hidden lg:block px-6 pt-5">
+          <RightNav />
         </div>
-      </div>
-      <div className="flex-[1.5] lg:flex-[1.1] hidden lg:block">
-        <RightNav />
       </div>
     </div>
   );
