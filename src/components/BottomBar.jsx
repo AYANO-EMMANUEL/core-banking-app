@@ -1,10 +1,7 @@
 /* eslint-disable react/prop-types */
 import { FaCube } from "react-icons/fa";
-<<<<<<< HEAD
 import { FcSettings } from "react-icons/fc";
 import { IoMdHelp } from "react-icons/io";
-=======
->>>>>>> refs/remotes/origin/main
 import { RiWallet3Fill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 
