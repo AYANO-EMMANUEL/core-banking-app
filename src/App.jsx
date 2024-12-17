@@ -6,6 +6,7 @@ import "./global.css";
 import Home from "./pages/Home/Home";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Activity from "./pages/Activity/Activity";
+import Settings from "./pages/Settings/Settings";
 import Login from "./pages/Auth/Login";
 import Verification from "./pages/Auth/Verification";
 import Signup from "./pages/Auth/Signup";
@@ -22,6 +23,8 @@ function App() {
           <Route path="/app" element={<MainLayout />}>
             <Route index  element={<Dashboard />} />
             <Route path="/app/activity" element={<Activity />} />
+            {/* <Route path="/app/Profile" element={<Profile />} /> */}
+            <Route path="/app/settings" element={<Settings />} />
           </Route>
           <Route path="/auth" element={<AuthLayout />}>
             <Route path="/auth/login" exact element={<Login />} />

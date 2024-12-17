@@ -71,7 +71,7 @@ const Sidebar = () => {
             <div className="ps-5 my-auto">Products</div>
           </div>
         </Link>
-        <Link to={'/app/wallet'} className="cursor-pointer block hover:bg-gray-100 px-10">
+        <Link to={'/app/settings'} className="cursor-pointer block hover:bg-gray-100 px-10">
           <div className="flex align-middle p-4">
             <FcSettings color={"#C0CCDA"} fill="#C0CCDA" size={"35"} />
             <div className="ps-5 my-auto">Settings</div>
