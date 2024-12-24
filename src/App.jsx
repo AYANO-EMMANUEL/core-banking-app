@@ -10,6 +10,7 @@ import Settings from "./pages/Settings/Settings";
 import Login from "./pages/Auth/Login";
 import Verification from "./pages/Auth/Verification";
 import Signup from "./pages/Auth/Signup";
+import Products from "./pages/Products/Products";
 
 function App() {
   // const user = null
@@ -23,6 +24,7 @@ function App() {
           <Route path="/app" element={<MainLayout />}>
             <Route index  element={<Dashboard />} />
             <Route path="/app/activity" element={<Activity />} />
+            <Route path="/app/products" element={<Products />} />
             {/* <Route path="/app/Profile" element={<Profile />} /> */}
             <Route path="/app/settings" element={<Settings />} />
           </Route>
