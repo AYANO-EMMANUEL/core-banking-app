@@ -1,5 +1,7 @@
 /* eslint-disable react/prop-types */
 import { FaCube } from "react-icons/fa";
+import { FcSettings } from "react-icons/fc";
+import { IoMdHelp } from "react-icons/io";
 import { RiWallet3Fill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 
@@ -59,14 +61,14 @@ const BottomBar = () => {
             <ActivityIcon color={"#200E32"} colorTwo={"#C0CCDA"} />
           </div>
         </Link>
-        <Link to={'/app/wallet'} className="cursor-pointer block hover:bg-gray-100 rounded-xl">
-          <div className="flex flex-col items-center align-middle p-4">
-            <RiWallet3Fill color={"#C0CCDA"} fill="#C0CCDA" size={"35"} />
-          </div>
-        </Link>
         <Link to={'/app/products'} className="cursor-pointer block hover:bg-gray-100 rounded-xl">
           <div className="flex flex-col items-center align-middle p-4">
             <FaCube color={"#C0CCDA"} size={"33"} />
+          </div>
+        </Link>
+        <Link to={'/app/wallet'} className="cursor-pointer block hover:bg-gray-100 rounded-xl">
+          <div className="flex flex-col items-center align-middle p-4">
+            <FcSettings color={"#C0CCDA"} fill="#C0CCDA" size={"35"} />
           </div>
         </Link>
       </div>
