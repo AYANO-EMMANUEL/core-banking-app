@@ -243,7 +243,7 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-        <div className="flex-[1.5] lg:flex-[1.1] hidden lg:block px-6 pt-5">
+        <div className="flex-[1.5] lg:flex-[1.1] hidden lg:block px-6 pt-0">
           <RightNav />
         </div>
       </div>

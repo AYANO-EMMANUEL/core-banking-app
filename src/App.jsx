@@ -9,6 +9,7 @@ import Activity from "./pages/Activity/Activity";
 import Login from "./pages/Auth/Login";
 import Verification from "./pages/Auth/Verification";
 import Signup from "./pages/Auth/Signup";
+import Products from "./pages/Products/Products";
 
 function App() {
   // const user = null
@@ -22,6 +23,7 @@ function App() {
           <Route path="/app" element={<MainLayout />}>
             <Route index  element={<Dashboard />} />
             <Route path="/app/activity" element={<Activity />} />
+            <Route path="/app/products" element={<Products />} />
           </Route>
           <Route path="/auth" element={<AuthLayout />}>
             <Route path="/auth/login" exact element={<Login />} />
