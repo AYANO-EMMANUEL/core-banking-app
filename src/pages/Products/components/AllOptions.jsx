@@ -41,25 +41,25 @@ const AllOptions = () => {
     {
       title: "Utilities and Subscriptions",
       options: [
-        { id: 1, label: "Airtime", icon: <FaMobileAlt />, onClick: () => console.log("Airtime clicked") },
-        { id: 2, label: "Electricity", icon: <FaPlugCircleBolt />, onClick: () => console.log("Copy clicked") },
-        { id: 3, label: "Betting", icon: <PiPokerChipFill />, onClick: () => console.log("Airtime clicked") },
-        { id: 4, label: "Subscriptions", icon: <MdSubscriptions />, onClick: () => console.log("Airtime clicked") },
-        { id: 4, label: "Card Services", icon: <PiCreditCardFill />, onClick: () => console.log("Airtime clicked") },
+        { id: 5, label: "Airtime", icon: <FaMobileAlt />, onClick: () => console.log("Airtime clicked") },
+        { id: 6, label: "Electricity", icon: <FaPlugCircleBolt />, onClick: () => console.log("Copy clicked") },
+        { id: 7, label: "Betting", icon: <PiPokerChipFill />, onClick: () => console.log("Airtime clicked") },
+        { id: 8, label: "Subscriptions", icon: <MdSubscriptions />, onClick: () => console.log("Airtime clicked") },
+        { id: 9, label: "Card Services", icon: <PiCreditCardFill />, onClick: () => console.log("Airtime clicked") },
       ],
     },
     {
       title: "Savings",
       options: [
-        { id: 5, label: "Savings Plan", icon: <PiPiggyBankFill />, onClick: () => console.log("Save Now clicked") },
-        { id: 6, label: "Goals", icon: <TbArcheryArrow />, onClick: () => console.log("Goals clicked") },
+        { id: 10, label: "Savings Plan", icon: <PiPiggyBankFill />, onClick: () => console.log("Save Now clicked") },
+        { id: 11, label: "Goals", icon: <TbArcheryArrow />, onClick: () => console.log("Goals clicked") },
       ],
     },
     {
       title: "Activity",
       options: [
-        { id: 7, label: "Transaction History", icon: <FaCopy />, onClick: () => console.log("Transactions clicked") },
-        { id: 8, label: "Get Statement", icon: <HiMiniDocumentMagnifyingGlass />, onClick: () => console.log("Statements clicked") },
+        { id: 12, label: "Transaction History", icon: <FaCopy />, onClick: () => console.log("Transactions clicked") },
+        { id: 13, label: "Get Statement", icon: <HiMiniDocumentMagnifyingGlass />, onClick: () => console.log("Statements clicked") },
       ],
     },
   ];
