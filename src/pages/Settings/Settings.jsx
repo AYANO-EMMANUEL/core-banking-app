@@ -66,7 +66,7 @@ const Settings = () => {
                 <span className="opacity-45 rounded-xl ml-2 p-1 px-2"> {">"} </span>
               </div>
             </div>
-            <div className="bg-slate-50 hover:bg-gray-400 hover:text-white rounded-2xl p-3 flex flex-col my-2 gap-y-2">
+            <div className="bg-slate-50 hover-bg-green-primary hover:text-white rounded-2xl p-3 flex flex-col my-2 gap-y-2">
               <div className="flex justify-between align-middle cursor-pointer my-auto py-auto">
                 <div className="flex justify-between align-middle my-auto py-auto">
                   <MdSecurity size={'30'} className="ms-2 h-full" />
@@ -84,7 +84,7 @@ const Settings = () => {
                 <span className="opacity-45 rounded-xl ml-2 p-1 px-2">Version 1.0  {">"} </span>
               </div>
             </div>
-            <div className="bg-slate-50 hover:bg-green-800 hover:text-white cursor-pointer rounded-2xl p-3 flex flex-col my-2 gap-y-2">
+            <div className="bg-slate-50 hover:bg-red-500 hover:text-white cursor-pointer rounded-2xl p-3 flex flex-col my-2 gap-y-2">
               <div className="flex justify-center text-2xl align-middle my-auto py-auto">
                 Sign Out
               </div>
