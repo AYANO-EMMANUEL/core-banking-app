@@ -144,14 +144,14 @@ const Dashboard = () => {
     <div>
       <div className="flex cursor-context-menu">
         {/* MAIN WALLET */}
-        <div className="flex-[2] px-6 pt-10">
+        <div className="flex-[2] px-6 pt-10 bg-[#F4F8F6]">
           <div className="flex justify-between align-middle items-center mb-6">
             <div className="text-3xl md:text-5xl">Wallet</div>
             <TopRightMenu styles="block lg:hidden" />
           </div>
-          <div className="flex space-x-6 mb-3">
+          <div className="flex space-x-6 mb-7">
             <div className="flex">
-              <div className="rounded-md p-3 m-auto bg-green-400">
+              <div className="rounded-md p-3 m-auto bg-icon-primary">
                 <Naira color={"white"} />
               </div>
               <div className="m-auto ps-4 truncate max-w-[20vw]">
@@ -159,10 +159,10 @@ const Dashboard = () => {
                 <div className="kycLevel opacity-[0.6]">KYC Level 1</div>
               </div>
             </div>
-            <div className="flex space-x-10 hover:border-gray-100 hover:shadow-md border-[0.5px] border-t-0 border-l-0 rounded-3xl hover:rounded-3xl hover:drop-shadow-md cursor-pointer">
+            {/* <div className="flex space-x-10 hover:border-gray-100 hover:shadow-md border-[0.5px] border-t-0 border-l-0 rounded-3xl hover:rounded-3xl hover:drop-shadow-md cursor-pointer">
               <div className="flex align-middle ps-4">
                 <div className="rounded-md pr-3 m-auto bg-green-40">
-                  <CardlessIcon color={"#4ADE80"} />
+                  <CardlessIcon style={{ color: 'var(bg-icon-primary)' }} color={"#16A34A"} />
                 </div>
                 <div className="m-auto">
                   <div className="kycLevelNext">Upgrade KYC Level 2</div>
@@ -171,13 +171,13 @@ const Dashboard = () => {
               <div className="m-auto px-4">
                 <GiPlayButton fill="#4ADE80" color="#4ADE80" />
               </div>
-            </div>
+            </div> */}
           </div>
           {/* WALLET BOX SHADOW */}
           <div
-            className="rounded-3xl bg-green-400 cursor-context-menu walletBg text-white p-6 py-10 mb-2"
+            className="rounded-3xl bg-green-primary cursor-context-menu walletBg text-white p-6 py-10 mb-2"
             style={{
-              filter: "blur(0.76px)",
+              filter: "blur(0.46px)",
               opacity: "0.9",
               boxShadow: "0px 18px 3px -10px rgba(0,0,0,0.15)",
             }}
@@ -189,21 +189,22 @@ const Dashboard = () => {
                 <p className="walletDigits text-3xl">140,020,500.00</p>
               </div>
               <div
-                className="rounded-xl p-2 bg-black cursor-pointer"
+                className="flex align-middle p-auto rounded-xl p-2 bg-white text-black cursor-pointer"
                 style={{
-                  filter: "blur(0.58px)",
+                  filter: "blur(0.18px)",
                 }}
               >
                 <AiOutlinePlus
-                  color="white"
-                  className="bold"
+                  color="black"
+                  className="bold my-auto"
                   size={"20"}
                   style={{
                     strokeWidth: "7",
                     filter:
-                      "drop-shadow(0.5px 0.5px 0 white) drop-shadow(-0.5px -0.5px 0 white)",
+                      "drop-shadow(0.5px 0.5px 0 black) drop-shadow(-0.5px -0.5px 0 black)",
                   }}
                 />
+                <div className="ps-1 pe-2">Add Funds</div>
               </div>
             </div>
             <div className="text-sm" style={{ fontSize: "bold" }}>
@@ -214,10 +215,10 @@ const Dashboard = () => {
           </div>
           {/* REQ & SEND BOX */}
           <div className="flex space-x-6 my-6">
-            <div className="flex justify-between w-3/6 border-gray-100 border-[1.5px] hover:border-none hover:shadow-md rounded-3xl cursor-pointer">
-              <div className="flex align-middle ps-4">
+            <div className="flex justify-between w-3/6 bg-white border-gray-100 border-[1px] hover:border-none hover:shadow-md rounded-3xl cursor-pointer">
+              <div className="flex align-middle ps-8">
                 <div className="rounded-md p-1 m-auto bg-green-40">
-                  <RequestMoneyIcon color={"#4ADE80"} />
+                  <RequestMoneyIcon color={"#16A34A"} />
                 </div>
                 <div className="m-auto">
                   <div className="ps-3">Request Money</div>
@@ -228,17 +229,17 @@ const Dashboard = () => {
               </div>
             </div>
             {/* WITHDRAWAL CARD BOX */}
-            <div className="flex justify-between w-3/6 border-gray-100 border-[1.5px] hover:border-none hover:shadow-md rounded-3xl cursor-pointer">
-              <div className="flex align-middle ps-4">
+            <div className="flex justify-between w-3/6 bg-white border-gray-100 border-[1px] hover:border-none hover:shadow-md rounded-3xl cursor-pointer">
+              <div className="flex align-middle ps-8">
                 <div className="rounded-md p-1 m-auto bg-green-40">
-                  <CardlessIcon color={"#4ADE80"} />
+                  <CardlessIcon color={"#16A34A"} />
                 </div>
                 <div className="m-auto">
                   <div className="ps-3">Cardless Withdrawal</div>
                 </div>
               </div>
-              <div className="m-auto px-3">
-                <GiPlayButton fill="#4ADE80" color="#4ADE80" />
+              <div className="m-auto me-0 px-3 pe-10">
+                <GiPlayButton fill="#C8E2DE" className="hover:text-[#4ADE80]" color="#4ADE80" />
               </div>
             </div>
           </div>

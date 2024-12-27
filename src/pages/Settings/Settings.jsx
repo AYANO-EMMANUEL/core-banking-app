@@ -3,8 +3,8 @@ import TopRightMenu from "../../components/TopRightMenu";
 import RightNav from "../../components/RightNav";
 import { AiOutlineCamera, AiOutlineCopy, AiOutlineLock } from "react-icons/ai";
 import { FiKey } from "react-icons/fi";
-import { RiInboxUnarchiveLine } from "react-icons/ri";
-import { BsQuestionDiamondFill } from "react-icons/bs";
+import { RiInboxUnarchiveLine, RiMessage2Line } from "react-icons/ri";
+import { BsQuestionDiamond, BsQuestionDiamondFill } from "react-icons/bs";
 import { MdSecurity, MdTextsms } from "react-icons/md";
 import { GrPower } from "react-icons/gr";
 import { CgInfo } from "react-icons/cg";
@@ -20,22 +20,22 @@ const Settings = () => {
             <TopRightMenu styles="block lg:hidden" />
           </div>
           <div className="flex flex-col my-6 mt-7">
-            <div className="bg-slate-50 rounded-2xl flex flex-col my-3 gap-y-6">
-              <div className="flex justify-between align-middle rounded-2xl p-3 hover:bg-green-400 hover:text-white cursor-pointer my-auto py-auto">
+            <div className="bg-slate-50 rounded-2xl flex flex-col my-2 gap-y-2">
+              <div className="flex justify-between align-middle rounded-2xl p-3 hover-bg-green-primary hover:text-white cursor-pointer my-auto py-auto">
                 <div className="flex justify-between align-middle my-auto py-auto">
                   <FiKey size={'30'} className="ms-2 h-full" />
                   <span className="opacity-70 pl-4 text-xl">Login Settings</span>
                 </div>
                 <span className="opacity-45 rounded-xl ml-2 p-1 px-2"> {">"} </span>
               </div>
-              <div className="flex justify-between align-middle rounded-2xl p-3 hover:bg-green-400 hover:text-white cursor-pointer my-auto py-auto">
+              <div className="flex justify-between align-middle rounded-2xl p-3 hover-bg-green-primary hover:text-white cursor-pointer my-auto py-auto">
                 <div className="flex justify-between align-middle my-auto py-auto">
                   <AiOutlineLock size={'30'} className="ms-2 h-full" />
                   <span className="opacity-70 pl-4 text-xl">Payment Settings</span>
                 </div>
                 <span className="opacity-45 rounded-xl ml-2 p-1 px-2"> {">"} </span>
               </div>
-              <div className="flex justify-between align-middle rounded-2xl p-3 hover:bg-green-400 hover:text-white cursor-pointer my-auto py-auto">
+              <div className="flex justify-between align-middle rounded-2xl p-3 hover-bg-green-primary hover:text-white cursor-pointer my-auto py-auto">
                 <div className="flex justify-between align-middle my-auto py-auto">
                   <RiInboxUnarchiveLine size={'30'} className="ms-2 h-full" />
                   <span className="opacity-70 pl-4 text-xl">Saving Settings</span>
@@ -43,22 +43,22 @@ const Settings = () => {
                 <span className="opacity-45 rounded-xl ml-2 p-1 px-2"> {">"} </span>
               </div>
             </div>
-            <div className="bg-slate-50 rounded-2xl flex flex-col my-3 gap-y-6">
-              <div className="flex justify-between align-middle rounded-2xl p-3 hover:bg-green-400 hover:text-white cursor-pointer my-auto py-auto">
+            <div className="bg-slate-50 rounded-2xl flex flex-col my-2 gap-y-2">
+              <div className="flex justify-between align-middle rounded-2xl p-3 hover-bg-green-primary hover:text-white cursor-pointer my-auto py-auto">
                 <div className="flex justify-between align-middle my-auto py-auto">
-                  <BsQuestionDiamondFill size={'30'} className="ms-2 h-full" />
+                  <BsQuestionDiamond size={'30'} className="ms-2 h-full" />
                   <span className="opacity-70 pl-4 text-xl">Security Questions</span>
                 </div>
                 <span className="opacity-45 rounded-xl ml-2 p-1 px-2"> {">"} </span>
               </div>
-              <div className="flex justify-between align-middle rounded-2xl p-3 hover:bg-green-400 hover:text-white cursor-pointer my-auto py-auto">
+              <div className="flex justify-between align-middle rounded-2xl p-3 hover-bg-green-primary hover:text-white cursor-pointer my-auto py-auto">
                 <div className="flex justify-between align-middle my-auto py-auto">
-                  <MdTextsms size={'30'} className="ms-2 h-full" />
+                  <RiMessage2Line size={'30'} className="ms-2 h-full" />
                   <span className="opacity-70 pl-4 text-xl">SMS Alert Subscription</span>
                 </div>
                 <span className="opacity-45 rounded-xl ml-2 p-1 px-2"> {">"} </span>
               </div>
-              <div className="flex justify-between align-middle hover:bg-green-400 hover:text-white rounded-2xl p-3 cursor-pointer my-auto py-auto">
+              <div className="flex justify-between align-middle hover-bg-green-primary hover:text-white rounded-2xl p-3 cursor-pointer my-auto py-auto">
                 <div className="flex justify-between align-middle my-auto py-auto">
                   <GrPower size={'30'} className="ms-2 h-full" />
                   <span className="opacity-70 pl-4 text-xl">Close Account</span>
@@ -66,7 +66,7 @@ const Settings = () => {
                 <span className="opacity-45 rounded-xl ml-2 p-1 px-2"> {">"} </span>
               </div>
             </div>
-            <div className="bg-slate-50 hover:bg-green-400 hover:text-white rounded-2xl p-3 flex flex-col my-3 gap-y-6">
+            <div className="bg-slate-50 hover:bg-gray-400 hover:text-white rounded-2xl p-3 flex flex-col my-2 gap-y-2">
               <div className="flex justify-between align-middle cursor-pointer my-auto py-auto">
                 <div className="flex justify-between align-middle my-auto py-auto">
                   <MdSecurity size={'30'} className="ms-2 h-full" />
@@ -75,7 +75,7 @@ const Settings = () => {
                 <span className="opacity-45 rounded-xl ml-2 p-1 px-2"> {">"} </span>
               </div>
             </div>
-            <div className="bg-slate-50 hover:bg-green-400 hover:text-white rounded-2xl p-3 flex flex-col my-3 gap-y-6">
+            <div className="bg-slate-50 hover-bg-green-primary hover:text-white rounded-2xl p-3 flex flex-col my-2 gap-y-2">
               <div className="flex justify-between align-middle cursor-pointer my-auto py-auto">
                 <div className="flex justify-between align-middle my-auto py-auto">
                   <CgInfo size={'30'} className="ms-2 h-full" />
@@ -84,7 +84,7 @@ const Settings = () => {
                 <span className="opacity-45 rounded-xl ml-2 p-1 px-2">Version 1.0  {">"} </span>
               </div>
             </div>
-            <div className="bg-slate-50 hover:bg-green-400 hover:text-white cursor-pointer rounded-2xl p-3 flex flex-col my-3 gap-y-6">
+            <div className="bg-slate-50 hover:bg-green-800 hover:text-white cursor-pointer rounded-2xl p-3 flex flex-col my-2 gap-y-2">
               <div className="flex justify-center text-2xl align-middle my-auto py-auto">
                 Sign Out
               </div>

@@ -86,3 +86,20 @@ img{
     @apply text-sm font-normal leading-tight text-gray-500 mt-2;
   }
   
+  /* Colours */
+  .bg-green-primary {
+    @apply bg-green-800;
+  }
+
+  .bg-icon-primary {
+    @apply bg-green-600;
+    /* bg-icon-primary : '@apply bg-green-600'; */
+  }
+
+  .hover-bg-green-primary:hover {
+    @apply hover:bg-green-600;
+  }
+
+  .pathNavIcon svg, .pathNavIcon .pathNavIcon1 {
+    fill: white !important;
+  }
