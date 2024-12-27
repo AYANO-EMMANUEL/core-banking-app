@@ -22,13 +22,12 @@ function App() {
           <Route path="/" element={<RootLayout />}>
             <Route index element={<Home />} />
           </Route>
-          <Route path="/app" element={<MainLayout />}>
-            <Route index  element={<Dashboard />} />
-            <Route path="/app/activity" exact element={<Activity />} />
-            <Route path="/app/products" exact element={<Products />} />
+          <Route path="/" element={<MainLayout />}>
+            <Route path="/app" element={<Dashboard />} />
+            <Route path="/activity" exact element={<Activity />} />
+            <Route path="/products" exact element={<Products />} />
             {/* <Route path="/app/Profile" element={<Profile />} /> */}
-            <Route path="/app/settings" exact element={<Settings />} />
-            <Route path="/app/coretransfer" exact element={<CoreTransfer />}/>
+            <Route path="/app/settings" element={<Settings />} />
           </Route>
           <Route path="/auth" element={<AuthLayout />}>
             <Route path="/auth/login" exact element={<Login />} />

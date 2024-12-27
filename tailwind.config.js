@@ -6,7 +6,8 @@ export default {
   ],
   theme: {
     extend: {
-      
+      // greenMain: "#166534",
+      bgIconPrimary: "#166534"
     },
   },
   plugins: [],

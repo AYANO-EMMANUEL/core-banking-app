@@ -32,11 +32,11 @@ const RightNav = () => {
                 }}
               >
                 <div className="flex align-middle rounded-md p-2 m-auto bg-green-40">
-                  <RiBankFill color={"#4ADE80"} size={"38"} />
+                  <RiBankFill color={"#16A34A"} size={"38"} />
                   <span className="text-sm ps-2 my-auto">Bank Deposit</span>
                 </div>
                 <div className="m-auto">
-                  <GiPlayButton fill="#4ADE80" color="#4ADE80" />
+                  <GiPlayButton fill="#C8E2DE" color="#4ADE80" />
                 </div>
               </div>
             </div>
@@ -50,7 +50,7 @@ const RightNav = () => {
                 }}
               >
                 <div className="flex align-middle rounded-md p-2 m-auto bg-green-40">
-                  <PhoneIcon color={"#4ADE80"} size={"38"} />
+                  <PhoneIcon color={"#16A34A"} size={"38"} className='my-auto' />
                   <span className="text-sm ps-2 my-auto">USSD Deposit</span>
                 </div>
                 <div className="m-auto">
@@ -68,7 +68,7 @@ const RightNav = () => {
                 }}
               >
                 <div className="flex align-middle rounded-md p-2 m-auto bg-green-40">
-                  <CardIcon color={"#4ADE80"} size={"38"} />
+                  <CardIcon color={"#16A34A"} size={"38"} />
                   <span className="text-sm ps-2 my-auto">Card Deposit</span>
                 </div>
                 <div className="m-auto">
@@ -80,7 +80,7 @@ const RightNav = () => {
           <div className="mb-5 cursor-pointer ">
             <div className="flex align-middle bg-[#DEF5F2] justify-around mx-3 p-3 border-gray-100 rounded-3xl hover:border-none hover:shadow-md">
               <div className="flex align-middle rounded-2xl p-1 m-auto bg-white">
-                <FaGraduationCap color={"#4ADE80"} size={"30"} />
+                <FaGraduationCap color={"#16A34A"} size={"38"} />
               </div>
               <span className="text-sm ps-2 my-auto text-wrap">
                 Learn More about Funding your wallet
