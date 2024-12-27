@@ -28,6 +28,7 @@ function App() {
             <Route path="/products" exact element={<Products />} />
             {/* <Route path="/app/Profile" element={<Profile />} /> */}
             <Route path="/app/settings" element={<Settings />} />
+            <Route path="/app/coretransfer" exact element={<CoreTransfer />}/>
           </Route>
           <Route path="/auth" element={<AuthLayout />}>
             <Route path="/auth/login" exact element={<Login />} />
