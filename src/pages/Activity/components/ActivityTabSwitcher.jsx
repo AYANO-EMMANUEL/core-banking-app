@@ -5,7 +5,7 @@ const ActivityTabSwitcher = ({activeTab, setActiveTab}) => {
         setActiveTab(tab);
         // console.log(transactions)
     }
-
+ 
     const TabSwitch = ({tab, text, switchTab, activeTab}) => {
       return(<button
         onClick={() => switchTab(tab)}
@@ -27,6 +27,6 @@ const ActivityTabSwitcher = ({activeTab, setActiveTab}) => {
     </div>
   );
 };
-
+ 
 
 export default ActivityTabSwitcher;
