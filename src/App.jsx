@@ -27,8 +27,8 @@ function App() {
             <Route path="/activity" exact element={<Activity />} />
             <Route path="/products" exact element={<Products />} />
             {/* <Route path="/app/Profile" element={<Profile />} /> */}
-            <Route path="/app/settings" element={<Settings />} />
-            <Route path="/app/coretransfer" exact element={<CoreTransfer />}/>
+            <Route path="/settings" exact element={<Settings />} />
+            <Route path="/coretransfer" exact element={<CoreTransfer />}/>
           </Route>
           <Route path="/auth" element={<AuthLayout />}>
             <Route path="/auth/login" exact element={<Login />} />
