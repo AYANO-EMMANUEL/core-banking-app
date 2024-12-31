@@ -11,6 +11,7 @@ import Login from "./pages/Auth/Login";
 import Verification from "./pages/Auth/Verification";
 import Signup from "./pages/Auth/Signup";
 import Products from "./pages/Products/Products";
+import CoreTransfer from "./pages/Transfer/CoreTransfer";
 
 function App() {
   // const user = null
@@ -23,10 +24,11 @@ function App() {
           </Route>
           <Route path="/" element={<MainLayout />}>
             <Route path="/app" element={<Dashboard />} />
-            <Route path="/activity" element={<Activity />} />
-            <Route path="/products" element={<Products />} />
+            <Route path="/activity" exact element={<Activity />} />
+            <Route path="/products" exact element={<Products />} />
             {/* <Route path="/app/Profile" element={<Profile />} /> */}
-            <Route path="/settings" element={<Settings />} />
+            <Route path="/settings" exact element={<Settings />} />
+            <Route path="/coretransfer" exact element={<CoreTransfer />}/>
           </Route>
           <Route path="/auth" element={<AuthLayout />}>
             <Route path="/auth/login" exact element={<Login />} />
