@@ -11,7 +11,7 @@ const OptionsSection = ({ title, options }) => {
   return (
     <div className="mb-6">
       <h3 className="text-lg font-semibold mb-4">{title}</h3>
-      <div className="grid grid-cols-5 gap-4">
+      <div className="grid grid-rpt gap-4">
         {options.map((option) => (
           <Option
             key={option.id}

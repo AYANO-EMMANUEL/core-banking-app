@@ -6,7 +6,7 @@ const ActivityList = ({ transactions, activeTab }) => {
     <div>
       <table className="w-full mt-5 rounded-t-lg overflow-hidden">
         <thead>
-          <tr className="bg-gray-200">
+          <tr className="bg-gray-200 hidden sm:table-row">
             <th className="text-start p-3">Transaction</th>
             <th className="text-start p-3">Date</th>
             <th className="text-start p-3 hidden lg:table-cell">Type</th>
