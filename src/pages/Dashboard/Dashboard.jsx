@@ -144,7 +144,7 @@ const Dashboard = () => {
     <div>
       <div className="flex cursor-context-menu">
         {/* MAIN WALLET */}
-        <div className="flex-[2] px-6 pt-10 bg-[#F4F8F6]">
+        <div className="flex-[2] border-r-[1px] border-gray-100 px-6 pt-10 bg-[#F4F8F6]">
           <div className="flex justify-between align-middle items-center mb-6">
             <div className="text-3xl md:text-5xl">Wallet</div>
             <TopRightMenu styles="block lg:hidden" />

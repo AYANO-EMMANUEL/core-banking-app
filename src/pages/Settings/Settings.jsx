@@ -8,7 +8,7 @@ import { BsQuestionDiamond, BsQuestionDiamondFill } from "react-icons/bs";
 import { MdSecurity, MdTextsms } from "react-icons/md";
 import { GrPower } from "react-icons/gr";
 import { CgInfo } from "react-icons/cg";
-import ProfileTab from "../Activity/components/ProfileTab";
+import ProfileTab from "../Settings/ProfileTab";
 
 const Settings = () => {
     return (
