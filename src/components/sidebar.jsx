@@ -1,9 +1,6 @@
 /* eslint-disable react/prop-types */
 import { FaCube } from "react-icons/fa";
-import { FcSettings } from "react-icons/fc";
 import { IoMdHelp, IoMdSettings } from "react-icons/io";
-import { MdSettings } from "react-icons/md";
-import { RiWallet3Fill } from "react-icons/ri";
 import { Link, NavLink } from "react-router-dom";
 
 const Sidebar = () => {

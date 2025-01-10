@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
-import { HandCoins } from "lucide-react";
 import { IoArrowDownCircle, IoArrowUpCircle } from "react-icons/io5";
-import { PiBankBold } from "react-icons/pi";
+import { PiBank, PiDeviceMobile, PiTelevision, PiUploadSimple } from "react-icons/pi";
 
 const TransactionPreviewItem = ({
   type,
@@ -27,11 +26,8 @@ const TransactionPreviewItem = ({
       <td className="p-3">
         {type === "transfer" && (
           <div className="flex gap-2 items-center">
-            <img
-              src="/assets/cards.png"
-              alt="Transaction icon"
-              className="rounded-full w-8 md:w-12 object-cover shadow-md aspect-square hidden lg:block"
-            />
+            <PiUploadSimple className="w-8 md:w-12 h-8 md:h-12 object-cover aspect-square hidden lg:block" />
+
             <div>
               <h3 className="text-sm md:text-base truncate max-w-[20vw]">
                 Transfer to{" "}
@@ -45,13 +41,11 @@ const TransactionPreviewItem = ({
         )}
         {type === "airtime" && (
           <div className="flex gap-2 items-center ">
-            <img
-              src="https://hallmarknews.com/wp-content/uploads/2023/11/Compress_20231117_094424_4513.png"
-              alt=""
-              className="shadow-md rounded-full w-8 md:w-12 object-cover aspect-square hidden lg:block"
-            />
+            <PiDeviceMobile className="w-8 md:w-12 h-8 md:h-12 object-cover aspect-square hidden lg:block"  />
             <div>
-              <h3 className="text-sm md:text-base truncate max-w-[20vw]">Airtime</h3>
+              <h3 className="text-sm md:text-base truncate max-w-[20vw]">
+                Airtime
+              </h3>
               <p className="text-xs text-gray-400 hidden lg:block">
                 ID: {transactionId}
               </p>
@@ -60,9 +54,11 @@ const TransactionPreviewItem = ({
         )}
         {type === "deposit" && (
           <div className="flex gap-2 items-center ">
-            <PiBankBold className=" w-8 md:w-12 h-8 md:h-12 object-cover aspect-square hidden lg:block" />
+            <PiBank className=" w-8 md:w-12 h-8 md:h-12 object-cover aspect-square hidden lg:block" />
             <div>
-              <h3 className="text-sm md:text-base truncate max-w-[20vw]">Bank Deposit</h3>
+              <h3 className="text-sm md:text-base truncate max-w-[20vw]">
+                Bank Deposit
+              </h3>
               <p className="text-xs text-gray-400 hidden lg:block">
                 ID: {transactionId}
               </p>
@@ -71,7 +67,7 @@ const TransactionPreviewItem = ({
         )}
         {type === "subscription" && (
           <div className="flex gap-2 items-center ">
-            <HandCoins className=" w-8 md:w-12 h-8 md:h-12 object-cover aspect-square hidden lg:block" />
+            <PiTelevision className=" w-8 md:w-12 h-8 md:h-12 object-cover aspect-square hidden lg:block" />
             <div>
               <h3 className="text-sm md:text-base truncate max-w-[20vw]">
                 Netflix Premium Subscription
@@ -115,7 +111,7 @@ const TransactionPreviewItem = ({
       </td>
 
       {/* Display Amount */}
-      <td className="p-3">NGN {amount.toLocaleString()}</td>
+      <td className="p-3 text-sm sm:text-base">NGN {amount.toLocaleString()}</td>
 
       {/* Display Status */}
       <td className="p-3">

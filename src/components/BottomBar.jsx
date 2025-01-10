@@ -1,9 +1,8 @@
 /* eslint-disable react/prop-types */
 import { FaCube } from "react-icons/fa";
 import { FcSettings } from "react-icons/fc";
-import { IoMdHelp } from "react-icons/io";
-import { RiWallet3Fill } from "react-icons/ri";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+
 
 const BottomBar = () => {
   const DashboardIcon = ({ color, colorTwo }) => {
@@ -49,29 +48,28 @@ const BottomBar = () => {
     );
   };
 
-  return (
-      <div className="md:hidden sticky bottom-0 left-0 bg-white flex items-center justify-around py-2">
-        <Link to={'/app'} className="cursor-pointer block hover:bg-gray-100 rounded-xl">
-          <div className="flex flex-col items-center align-middle p-4">
-            <DashboardIcon color={"#200E32"} colorTwo={"#C0CCDA"} />
-          </div>
-        </Link>
-        <Link to={'/app/activity'} className="cursor-pointer block hover:bg-gray-100 rounded-xl">
-          <div className="flex flex-col items-center align-middle p-4">
-            <ActivityIcon color={"#200E32"} colorTwo={"#C0CCDA"} />
-          </div>
-        </Link>
-        <Link to={'/app/products'} className="cursor-pointer block hover:bg-gray-100 rounded-xl">
-          <div className="flex flex-col items-center align-middle p-4">
-            <FaCube color={"#C0CCDA"} size={"33"} />
-          </div>
-        </Link>
-        <Link to={'/app/wallet'} className="cursor-pointer block hover:bg-gray-100 rounded-xl">
-          <div className="flex flex-col items-center align-middle p-4">
-            <FcSettings color={"#C0CCDA"} fill="#C0CCDA" size={"35"} />
-          </div>
-        </Link>
+  const BottomNavLink = ({to, icon}) => {
+    return (<NavLink
+      to={`/${to}`}
+      className={({ isActive }) =>
+        isActive ? " cursor-pointer block pathNavIcon bg-green-primary rounded-xl" : "cursor-pointer block hover:bg-gray-100 rounded-xl"
+       }
+      
+    >
+      <div className="flex flex-col items-center align-middle p-4">
+        {icon}
       </div>
+    </NavLink>)
+  };
+
+
+  return (
+    <div className="md:hidden sticky bottom-0 left-0 bg-white flex items-center justify-around py-2">
+      <BottomNavLink to={'app'} icon={<DashboardIcon color={"#200E32"} colorTwo={"#C0CCDA"}/>} />
+      <BottomNavLink to={'activity'} icon={<ActivityIcon color={"#200E32"} colorTwo={"#C0CCDA"}/>} />
+      <BottomNavLink to={'products'} icon={<FaCube color={"#C0CCDA"} size={"35"}/>} />
+      <BottomNavLink to={'settings'} icon={<FcSettings color={"#200E32"} colorTwo={"#C0CCDA"} size={"35"}/>} />
+    </div>
   );
 };
 
