@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { FaCube } from "react-icons/fa";
 import { FcSettings } from "react-icons/fc";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 
 const BottomBar = () => {
