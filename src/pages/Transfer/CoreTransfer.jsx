@@ -110,7 +110,7 @@ const CoreTransfer = () => {
         <TransferFooter />
       </div>
       <div className="hidden lg:block w-[40vw] h-screen flex-[1] text-red-500">
-        ILLUSTRATION
+        {/* ILLUSTRATION */}
       </div>
     </div>
   );

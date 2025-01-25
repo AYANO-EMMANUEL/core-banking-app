@@ -3,6 +3,8 @@ import { AiOutlinePlus } from "react-icons/ai";
 import { GiPlayButton } from "react-icons/gi";
 import TopRightMenu from "../../components/TopRightMenu";
 import RightNav from "../../components/RightNav";
+import Transfer from "../../components/popups/transfer";
+import { useState } from "react";
 
 const Dashboard = () => {
   const Naira = ({ color, styles }) => {
@@ -140,8 +142,13 @@ const Dashboard = () => {
     );
   };
 
+  const toggleTransfer = () => {
+    setModal(!modal);
+  }
+
   return (
     <div>
+      {/* <Transfer /> */}
       <div className="flex cursor-context-menu">
         {/* MAIN WALLET */}
         <div className="flex-[2] border-r-[1px] border-gray-100 px-6 pt-10 bg-[#F4F8F6]">
@@ -204,7 +211,12 @@ const Dashboard = () => {
                       "drop-shadow(0.5px 0.5px 0 black) drop-shadow(-0.5px -0.5px 0 black)",
                   }}
                 />
-                <div className="ps-1 pe-2">Add Funds</div>
+                <div 
+                  className="ps-1 pe-2"
+                  onClick={toggleTransfer}
+                  >
+                    Add Funds
+                </div>
               </div>
             </div>
             <div className="text-sm" style={{ fontSize: "bold" }}>
