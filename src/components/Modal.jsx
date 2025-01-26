@@ -1,24 +1,20 @@
-import React from "react";
+// src/components/Modal.js
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+// import { useModal } from '../contexts/ModalContext';
 
-const Modal = ({ isOpen, onClose, children }) => {
-  if (!isOpen) return null;
+const Modal = ({ children }) => {
+    const navigate = useNavigate();
 
   return (
-    <div
-      className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
-      onClick={onClose}
-    >
-      <div
-        className="bg-white rounded-lg shadow-lg p-6 w-full max-w-lg relative"
-        onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the modal
-      >
-        <button
-          className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
-          onClick={onClose}
-        >
-          &times;
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50" onClick={() => navigate(-1)}>
+      <div className="bg-white rounded-lg shadow-lg p-6 max-w-[600px] w-max h-max" onClick={(e) => e.stopPropagation()}>
+        <button className="absolute top-2 right-2 text-gray-500 hover:text-gray-700" onClick={() => navigate(-1)}>
+          X
         </button>
-        {children}
+        <div className="mt-4">
+          {children}
+        </div>
       </div>
     </div>
   );

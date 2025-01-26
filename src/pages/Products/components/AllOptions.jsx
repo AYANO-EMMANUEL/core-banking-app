@@ -18,6 +18,7 @@ const OptionsSection = ({ title, options }) => {
             icon={option.icon}
             label={option.label}
             onClick={option.onClick}
+            link={option.link}
           />
         ))}
       </div>
@@ -32,27 +33,27 @@ const AllOptions = () => {
     {
       title: "Funds",
       options: [
-        { id: 1, label: "Add Money", icon: <PiHandDepositFill />, onClick: () => console.log("A") },
-        { id: 2, label: "CoreSend", icon: <FaMoneyBillAlt />, onClick: () => console.log("To Opay clicked") },
-        { id: 3, label: "Send to Bank", icon: <FaUniversity />, onClick: () => console.log("To Bank clicked") },
-        { id: 4, label: "Withdraw", icon: <PiHandWithdrawFill />, onClick: () => console.log("To Bank clicked") },
+        { id: 1, link:"", label: "Add Money", icon: <PiHandDepositFill />, onClick: () => console.log("A") },
+        { id: 2, link:"/coretransfer", label: "CoreSend", icon: <FaMoneyBillAlt />, onClick: () => console.log("To Opay clicked") },
+        { id: 3, link:"", label: "Send to Bank", icon: <FaUniversity />, onClick: () => console.log("To Bank clicked") },
+        { id: 4, link:"", label: "Withdraw", icon: <PiHandWithdrawFill />, onClick: () => console.log("To Bank clicked") },
       ],
     },
     {
       title: "Utilities and Subscriptions",
       options: [
-        { id: 5, label: "Airtime", icon: <FaMobileAlt />, onClick: () => console.log("Airtime clicked") },
-        { id: 6, label: "Electricity", icon: <FaPlugCircleBolt />, onClick: () => console.log("Copy clicked") },
-        { id: 7, label: "Betting", icon: <PiPokerChipFill />, onClick: () => console.log("Airtime clicked") },
-        { id: 8, label: "Subscriptions", icon: <MdSubscriptions />, onClick: () => console.log("Airtime clicked") },
-        { id: 9, label: "Card Services", icon: <PiCreditCardFill />, onClick: () => console.log("Airtime clicked") },
+        { id: 5, link:"", label: "Airtime", icon: <FaMobileAlt />, onClick: () => console.log("Airtime clicked") },
+        { id: 6, link:"", label: "Electricity", icon: <FaPlugCircleBolt />, onClick: () => console.log("Copy clicked") },
+        { id: 7, link:"", label: "Betting", icon: <PiPokerChipFill />, onClick: () => console.log("Airtime clicked") },
+        { id: 8, link:"", label: "Subscriptions", icon: <MdSubscriptions />, onClick: () => console.log("Airtime clicked") },
+        { id: 9, link:"", label: "Card Services", icon: <PiCreditCardFill />, onClick: () => console.log("Airtime clicked") },
       ],
     },
     {
       title: "Savings",
       options: [
-        { id: 10, label: "Savings Plan", icon: <PiPiggyBankFill />, onClick: () => console.log("Save Now clicked") },
-        { id: 11, label: "Goals", icon: <TbArcheryArrow />, onClick: () => console.log("Goals clicked") },
+        { id: 10, link:"", label: "Savings Plan", icon: <PiPiggyBankFill />, onClick: () => console.log("Save Now clicked") },
+        { id: 11, link:"", label: "Goals", icon: <TbArcheryArrow />, onClick: () => console.log("Goals clicked") },
       ],
     },
     {
@@ -67,7 +68,7 @@ const AllOptions = () => {
   return (
       <div className="p-6 pt-0">
       {sections.map((section, index) => (
-        <OptionsSection key={index} title={section.title} options={section.options} />
+        <OptionsSection key={index} title={section.title} options={section.options}  />
       ))}
     </div>
   );

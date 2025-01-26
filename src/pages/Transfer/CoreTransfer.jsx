@@ -2,6 +2,8 @@ import { useState } from "react";
 import TransferForm from "./components/TransferForm";
 import FeedbackMessage from "./components/FeedbackMessage";
 import TransferFooter from "./components/TransferFooter";
+import Modal from "../../components/MOdal";
+import { BsLightningFill } from "react-icons/bs";
 
 const CoreTransfer = () => {
   const [recipientEmail, setRecipientEmail] = useState("");
@@ -88,31 +90,30 @@ const CoreTransfer = () => {
   };
 
   return (
-    <div className="min-h-screen md:h-screen flex md:overflow-y-hidden">
-      <div className="max-w-full h-full p-6 lg:p-10 flex-[1.3] md:overflow-y-scroll">
-        <h1 className="text-3xl font-bold mt-4">Money Transfer</h1>
+    <Modal>
+      <div className="flex">
+        <div className="max-w-full md:overflow-y-scroll mx-auto">
+          <h1 className="text-3xl font-bold mb-1"><span className="text-green-800">Core</span> Transfer <span><BsLightningFill className="inline text-base text-green-800"/> </span></h1>
 
-        <FeedbackMessage
-          successMessage={successMessage}
-          errorMessage={errorMessage}
-        />
+          <FeedbackMessage
+            successMessage={successMessage}
+            errorMessage={errorMessage}
+          />
 
-        <TransferForm
-          recipientEmail={recipientEmail}
-          setRecipientEmail={setRecipientEmail}
-          amount={amount}
-          setAmount={setAmount}
-          message={message}
-          setMessage={setMessage}
-          handleTransfer={handleTransfer}
-        />
+          <TransferForm
+            recipientEmail={recipientEmail}
+            setRecipientEmail={setRecipientEmail}
+            amount={amount}
+            setAmount={setAmount}
+            message={message}
+            setMessage={setMessage}
+            handleTransfer={handleTransfer}
+          />
 
-        <TransferFooter />
+          <TransferFooter />
+        </div>
       </div>
-      <div className="hidden lg:block w-[40vw] h-screen flex-[1] text-red-500">
-        ILLUSTRATION
-      </div>
-    </div>
+    </Modal>
   );
 };
 

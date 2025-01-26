@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import RootLayout from "./layout/RootLayout";
 import AuthLayout from "./layout/AuthLayout";
 import MainLayout from "./layout/MainLayout";
@@ -15,11 +15,14 @@ import CoreTransfer from "./pages/Transfer/CoreTransfer";
 
 function App() {
   // const user = null
+  const location = useLocation();
+  const background = location.state && location.state.background;
+  console.log(location);
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<RootLayout />}>
+      
+        <Routes location={background || location}>
+          <Route path="/" element={<RootLayout/>}>
             <Route index element={<Home />} />
           </Route>
           <Route path="/" element={<MainLayout />}>
@@ -28,7 +31,7 @@ function App() {
             <Route path="/products" exact element={<Products />} />
             {/* <Route path="/app/Profile" element={<Profile />} /> */}
             <Route path="/settings" exact element={<Settings />} />
-            <Route path="/coretransfer" exact element={<CoreTransfer />}/>
+            {/* <Route path="/coretransfer" exact element={<CoreTransfer />} /> */}
           </Route>
           <Route path="/auth" element={<AuthLayout />}>
             <Route path="/auth/login" exact element={<Login />} />
@@ -36,7 +39,12 @@ function App() {
             <Route path="/auth/verification" exact element={<Verification />} />
           </Route>
         </Routes>
-      </BrowserRouter>
+        {background && (
+          <Routes>
+            <Route path="/coretransfer" element={<CoreTransfer />} />
+          </Routes>
+        )}
+      
     </>
   );
 }
