@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 
 const Option = ({ icon, label, onClick, link }) => {
-
+  
   const location = useLocation();
 
   return (

@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
 import CoreTransfer from '../../pages/Transfer/CoreTransfer';
+import { X } from 'lucide-react';
 
 // function Transfer() {
     // const PopOver = ({ isOpen, onClose, children }) => {
@@ -41,13 +42,15 @@ import CoreTransfer from '../../pages/Transfer/CoreTransfer';
     //     )
     // };
 // };
-    const Transfer = () => {
+const Transfer = ( {open, onClose, children} ) => {
+        // const [ open, setOpen ] = useState(false);
+        // const onClose = (setOpen) => { setOpen(!open) };
 
-        const { modal, setModal } = useState(true);
+        // const { modal, setmodal } = useState(false);
 
-        const toggleTransfer = () => {
-            setModal(!modal);
-        }
+        // const toggleTransfer = () => {
+        //     setModal(!modal);
+        // }
 
         // if(modal) {
         //     document.body.classList.add('')
@@ -56,26 +59,15 @@ import CoreTransfer from '../../pages/Transfer/CoreTransfer';
         // }
 
         return (
-            <div className={modal ? 'block' : 'hidden'}>
+            <div onClick={onClose} className={`fixed inset-0 flex justify-center cursor-pointer items-center transition-colors ${ open ? 'visible bg-black/20' : 'invisible hidden' }`}>
                 <div 
-                    className='overlay' 
-                    style={
-                        {
-                            position : "fixed",
-                            top : "0",
-                            bottom : "0", 
-                            left : "0",
-                            right : "0",
-                            height : "100vh",
-                            width : "100vw",
-                            backgroundColor : "grey"
-                        }
-                    }
-                    onClick={toggleTransfer}
+                    className={`bg-white relative rounded-xl cursor-default transition-all 
+                        ${ open ? '' : 'scale-12 opacity-0' }
+                        `}
+                    onClick={ (e) => e.stopPropagation() }
                 >
-                    <CoreTransfer />
-                </div>        
-                <div className="">
+                     <button className='absolute top-2 right-2 p-1 text-gray-500 hover:text-gray-900' onClick={onClose}> <X /> </button>
+                    { children }
                 </div>
             </div>
         )

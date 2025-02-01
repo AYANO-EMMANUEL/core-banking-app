@@ -5,6 +5,7 @@ import TopRightMenu from "../../components/TopRightMenu";
 import RightNav from "../../components/RightNav";
 import Transfer from "../../components/popups/transfer";
 import { useState } from "react";
+import CoreTransfer from "../Transfer/CoreTransfer";
 
 const Dashboard = () => {
   const Naira = ({ color, styles }) => {
@@ -145,7 +146,8 @@ const Dashboard = () => {
   const toggleTransfer = () => {
     setModal(!modal);
   }
-
+  
+  const [ open, setOpen ] = useState(false);
   return (
     <div>
       {/* <Transfer /> */}
@@ -213,7 +215,7 @@ const Dashboard = () => {
                 />
                 <div 
                   className="ps-1 pe-2"
-                  onClick={toggleTransfer}
+                  onClick={() => setOpen(true)}
                   >
                     Add Funds
                 </div>
@@ -260,6 +262,9 @@ const Dashboard = () => {
           <RightNav />
         </div>
       </div>
+      <Transfer open={ open } onCLose={ () => setOpen(false) } >
+        <CoreTransfer />
+      </Transfer>
     </div>
   );
 };
