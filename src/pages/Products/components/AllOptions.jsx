@@ -42,7 +42,7 @@ const AllOptions = () => {
     {
       title: "Utilities and Subscriptions",
       options: [
-        { id: 5, link:"", label: "Airtime", icon: <FaMobileAlt />, onClick: () => console.log("Airtime clicked") },
+        { id: 5, link:"/airtime", label: "Airtime", icon: <FaMobileAlt />, onClick: () => console.log("Airtime clicked") },
         { id: 6, link:"", label: "Electricity", icon: <FaPlugCircleBolt />, onClick: () => console.log("Copy clicked") },
         { id: 7, link:"", label: "Betting", icon: <PiPokerChipFill />, onClick: () => console.log("Airtime clicked") },
         { id: 8, link:"", label: "Subscriptions", icon: <MdSubscriptions />, onClick: () => console.log("Airtime clicked") },

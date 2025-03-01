@@ -12,12 +12,12 @@ import Verification from "./pages/Auth/Verification";
 import Signup from "./pages/Auth/Signup";
 import Products from "./pages/Products/Products";
 import CoreTransfer from "./pages/Transfer/CoreTransfer";
+import Airtime from "./pages/Airtime/Airtime";
 
 function App() {
   // const user = null
   const location = useLocation();
   const background = location.state && location.state.background;
-  console.log(location);
   return (
     <>
       
@@ -31,7 +31,7 @@ function App() {
             <Route path="/products" exact element={<Products />} />
             {/* <Route path="/app/Profile" element={<Profile />} /> */}
             <Route path="/settings" exact element={<Settings />} />
-            {/* <Route path="/coretransfer" exact element={<CoreTransfer />} /> */}
+            <Route path="/coretransfer" exact element={<CoreTransfer />} />
           </Route>
           <Route path="/auth" element={<AuthLayout />}>
             <Route path="/auth/login" exact element={<Login />} />
@@ -42,6 +42,7 @@ function App() {
         {background && (
           <Routes>
             <Route path="/coretransfer" element={<CoreTransfer />} />
+            <Route path="/airtime" element={<Airtime />} />
           </Routes>
         )}
       
