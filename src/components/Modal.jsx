@@ -8,11 +8,11 @@ const Modal = ({ children }) => {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50" onClick={() => navigate(-1)}>
-      <div className="bg-white rounded-lg shadow-lg p-6 max-w-[600px] w-max h-max" onClick={(e) => e.stopPropagation()}>
+      <div className="bg-white rounded-lg shadow-lg p-6 max-w-[600px] w-[90%] sm:w-max h-max" onClick={(e) => e.stopPropagation()}>
         <button className="absolute top-2 right-2 text-gray-500 hover:text-gray-700" onClick={() => navigate(-1)}>
           X
         </button>
-        <div className="mt-4">
+        <div>
           {children}
         </div>
       </div>

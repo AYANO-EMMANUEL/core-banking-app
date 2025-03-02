@@ -18,7 +18,7 @@ const RecentRecipients = () => {
             <img
               src={`https://st3.depositphotos.com/9998432/13335/v/450/depositphotos_133351928-stock-illustration-default-placeholder-man-and-woman.jpg`}
               alt={recipient.name}
-              className="w-12 aspect-square rounded-full object-cover"
+              className="md:w-12 w-[32px] aspect-square rounded-full object-cover"
             />
             <p className="mt-1 font-bold text-center text-xs">{recipient.name}</p>
           </div>

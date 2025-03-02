@@ -1,3 +1,4 @@
+import { FaPaperPlane } from "react-icons/fa6";
 import { formatToTwoDecimalPlaces } from "../../../utilities/currencyFormatter";
 import RecentRecipients from "./RecentRecipients";
 
@@ -15,7 +16,7 @@ const TransferForm = ({
     <RecentRecipients />
 
     <div className="mb-2">
-      <label htmlFor="email" className="block text-gray-700 font-medium mb-1 mt-2">
+      <label htmlFor="email" className="block text-sm text-gray-700 font-medium mb-1 mt-2">
         Recipient Email
       </label>
       <input
@@ -29,7 +30,7 @@ const TransferForm = ({
     </div>
 
     <div className="mb-4">
-      <label htmlFor="amount" className="block text-gray-700 font-medium mb-1">
+      <label htmlFor="amount" className="block text-sm text-gray-700 font-medium mb-1">
         Amount (&#8358;)
       </label>
       <input
@@ -44,7 +45,7 @@ const TransferForm = ({
     </div>
 
     <div className="mb-4">
-      <label htmlFor="message" className="block text-gray-700 font-medium mb-1 mt-2">
+      <label htmlFor="message" className="block text-sm text-gray-700 font-medium mb-1 mt-2">
         Message (Optional)
       </label>
       <input
@@ -61,7 +62,8 @@ const TransferForm = ({
       onClick={handleTransfer}
       className="w-full bg-green-700 text-white py-3 rounded hover:bg-green-600 focus:outline-none transition-[background-color] transition-mild"
     >
-      Send Money
+      <span className="mr-2">Send Money</span>
+      <FaPaperPlane className="inline" color="white"/>
     </button>
   </>
 );

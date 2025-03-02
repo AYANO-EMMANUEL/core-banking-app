@@ -2,7 +2,7 @@ import { useState } from "react";
 import TransferForm from "./components/TransferForm";
 import FeedbackMessage from "./components/FeedbackMessage";
 import TransferFooter from "./components/TransferFooter";
-import Modal from "../../components/MOdal";
+import Modal from "../../components/Modal";
 import { BsLightningFill } from "react-icons/bs";
 
 const CoreTransfer = () => {
