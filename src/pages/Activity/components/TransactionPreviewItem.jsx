@@ -22,7 +22,7 @@ const TransactionPreviewItem = ({
   });
 
   return (
-    <tr className="transition-hover duration-300 hover:bg-gray-200 cursor-pointer">
+    <tr className="transition-hover duration-300 hover:bg-gray-100 cursor-pointer">
       <td className="p-3">
         {type === "transfer" && (
           <div className="flex gap-2 items-center">
@@ -94,12 +94,12 @@ const TransactionPreviewItem = ({
       <td className="p-3 hidden lg:table-cell">
         <p
           className={
-            entry === "outgoing"
+            entry === "debit"
               ? "text-red-500 font-semibold"
               : "text-green-500 font-semibold"
           }
         >
-          {entry === "outgoing" ? (
+          {entry === "debit" ? (
             <IoArrowUpCircle className="inline mr-2" />
           ) : (
             <IoArrowDownCircle className="inline mr-2" />
@@ -118,9 +118,9 @@ const TransactionPreviewItem = ({
         <p
           className={`mx-auto md:mx-0 aspect-square md:aspect-auto px-2 py-1 rounded-xl text-sm w-fit ${
             status === "Successful"
-              ? "bg-green-300 text-green-600"
+              ? "bg-green-300 text-black"
               : status === "Pending"
-              ? "bg-yellow-300 text-yellow-600"
+              ? "bg-yellow-300 text-black"
               : "bg-red-300 text-red-600"
           }`}
         >

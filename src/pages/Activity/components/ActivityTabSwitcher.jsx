@@ -9,9 +9,9 @@ const ActivityTabSwitcher = ({activeTab, setActiveTab}) => {
     const TabSwitch = ({tab, text, switchTab, activeTab}) => {
       return(<button
         onClick={() => switchTab(tab)}
-        className={`rounded-lg px-4 py-2 text-sm ${
+        className={`rounded-lg px-4 py-2 text-sm mx-1  ${
           !(activeTab === tab)
-            ? "text-gray-500"
+            ? "text-gray-500 hover:bg-gray-100"
             : "text-white bg-black"
         }`}
       >
@@ -22,8 +22,8 @@ const ActivityTabSwitcher = ({activeTab, setActiveTab}) => {
   return (
     <div>
         <TabSwitch activeTab={activeTab} tab={'all'} text={'All'} switchTab={() => switchTab('all')}/>
-        <TabSwitch activeTab={activeTab} tab={'incoming'} text={'Incoming'} switchTab={() => switchTab('incoming')}/>
-        <TabSwitch activeTab={activeTab} tab={'outgoing'} text={'Outgoing'} switchTab={() => switchTab('outgoing')}/>
+        <TabSwitch activeTab={activeTab} tab={'credit'} text={'Received'} switchTab={() => switchTab('credit')}/>
+        <TabSwitch activeTab={activeTab} tab={'debit'} text={'Sent'} switchTab={() => switchTab('debit')}/>
     </div>
   );
 };
