@@ -13,7 +13,7 @@ const Activity = () => {
       recipient: "ADEJUMOBI KEHINDE",
       transactionId: "123456789",
       timestamp: "2024-11-25T23:59:00",
-      entry: "outgoing",
+      entry: "debit",
     },
     {
       type: "airtime",
@@ -22,7 +22,7 @@ const Activity = () => {
       recipient: "08012345678",
       transactionId: "987654321",
       timestamp: "2024-11-26T12:30:00",
-      entry: "outgoing",
+      entry: "debit",
     },
     {
       type: "deposit",
@@ -31,7 +31,7 @@ const Activity = () => {
       recipient: "Bank XYZ",
       transactionId: "456789123",
       timestamp: "2024-11-26T08:15:00",
-      entry: "incoming",
+      entry: "credit",
     },
     {
       type: "subscription",
@@ -40,7 +40,7 @@ const Activity = () => {
       recipient: "Streaming Service",
       transactionId: "321654987",
       timestamp: "2024-11-26T14:45:00",
-      entry: "outgoing",
+      entry: "debit",
     },
     {
       type: "transfer",
@@ -49,7 +49,7 @@ const Activity = () => {
       recipient: "OLUWASEUN ADEYEMI",
       transactionId: "654123789",
       timestamp: "2024-11-27T09:00:00",
-      entry: "outgoing",
+      entry: "debit",
     },
   ]);
 
