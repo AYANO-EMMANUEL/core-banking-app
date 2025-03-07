@@ -4,6 +4,8 @@ import mtn from "./assets/mtn.png";
 import glo from "./assets/glo.png";
 import airtel from "./assets/airtel.svg";
 import { FaCheckCircle } from "react-icons/fa";
+import NumericInput from "./components/CurrencyInput";
+import { formatNumberWithCommas } from "../../utilities/AirtimeCurrencyFormat";
 
 const Airtime = () => {
   const [currentProvider, setCurrentProvider] = useState("mtn");
@@ -12,13 +14,13 @@ const Airtime = () => {
 
   const providers = [
     { name: "mtn", icon: mtn, color: "yellow" },
-    { name: "airtel", icon: airtel, color: "neutral" },
+    { name: "airtel", icon: airtel, color: "white" },
     { name: "glo", icon: glo, color: "green" },
   ];
 
   const handlePurchase = () => {
     console.log(
-      `Provider: ${provider}, Phone Number: ${phoneNumber}, Amount: ${amount}`
+      `Provider: ${currentProvider}, Phone Number: ${phoneNumber}, Amount: ${amount}`
     );
     setIsModalOpen(false);
   };
@@ -43,7 +45,7 @@ const Airtime = () => {
               {providers.map((provider) => (
                 <div
                   key={provider.name}
-                  className={`rounded-md flex items-center justify-center h-12 bg-${provider.color}-200 cursor-pointer relative`}
+                  className={`rounded-md flex items-center justify-center h-12 bg-${provider.color}-400 cursor-pointer relative shadow-sm`}
                   onClick={() => setCurrentProvider(provider.name)}
                 >
                   <img src={provider.icon} alt="" className="w-[24px]" />
@@ -59,33 +61,31 @@ const Airtime = () => {
               Phone Number:
             </label>
             <input
-              type="text"
+              type="number"
               id="phoneNumber"
               value={phoneNumber}
               onChange={(e) => setPhoneNumber(e.target.value)}
               required
-              className="w-full p-2 mt-1 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+              className="w-full p-2 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
             />
           </div>
           <div className="mb-4">
             <label htmlFor="amount" className="block text-sm font-medium">
               Amount:
             </label>
-            <input
-              type="number"
-              id="amount"
-              value={amount}
-              onChange={(e) => setAmount(e.target.value)}
-              required
-              className="w-full p-2 mt-1 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
-            />
+            <div className="relative">
+              <NumericInput value={amount} setValue={setAmount} />
+              <span className="absolute left-3 top-[50%] translate-y-[-40%]">
+                ₦
+              </span>
+            </div>
             {/* a grid of suggested amounts in naira */}
             <div className="grid grid-cols-3 gap-2 mt-4">
-              {[100, 200, 500].map((suggestedAmount) => (
+              {[100, 200, 1500].map((suggestedAmount) => (
                 <div
                   key={suggestedAmount}
-                  className="bg-neutral-200 text-sm text-center py-2 rounded-lg"
-                  onClick={() => setAmount(suggestedAmount)}
+                  className="bg-neutral-200 text-sm text-center py-2 rounded-lg cursor-pointer"
+                  onClick={() => setAmount(formatNumberWithCommas(suggestedAmount))}
                 >
                   ₦ {suggestedAmount}
                 </div>
