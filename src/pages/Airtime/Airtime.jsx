@@ -61,11 +61,12 @@ const Airtime = () => {
               Phone Number:
             </label>
             <input
-              type="number"
+              type="text"
               id="phoneNumber"
               value={phoneNumber}
               onChange={(e) => setPhoneNumber(e.target.value)}
               required
+              maxLength={11}
               className="w-full p-2 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
             />
           </div>
@@ -74,7 +75,7 @@ const Airtime = () => {
               Amount:
             </label>
             <div className="relative">
-              <NumericInput value={amount} setValue={setAmount} />
+              <NumericInpu vt value={amount} setValue={setAmount} />
               <span className="absolute left-3 top-[50%] translate-y-[-40%]">
                 ₦
               </span>
