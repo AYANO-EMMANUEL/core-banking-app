@@ -1,11 +1,14 @@
 /* eslint-disable react/prop-types */
-import { AiOutlinePlus } from "react-icons/ai";
+import { AiOutlineClose, AiOutlinePlus } from "react-icons/ai";
 import { GiPlayButton } from "react-icons/gi";
 import TopRightMenu from "../../components/TopRightMenu";
 import RightNav from "../../components/RightNav";
 import Transfer from "../../components/popups/transfer";
-import { useState } from "react";
+import React, { useState } from "react";
 import CoreTransfer from "../Transfer/CoreTransfer";
+import ModalApp from "../../components/ModalFunc";
+import TestModal from "../../components/TestModal";
+import FundModal from "./FundModal";
 
 const Dashboard = () => {
   const Naira = ({ color, styles }) => {
@@ -146,8 +149,9 @@ const Dashboard = () => {
   const toggleTransfer = () => {
     setModal(!modal);
   }
-  
-  const [ open, setOpen ] = useState(false);
+
+  const [open, setOpen] = useState(false);
+
   return (
     <div>
       {/* <Transfer /> */}
@@ -213,11 +217,11 @@ const Dashboard = () => {
                       "drop-shadow(0.5px 0.5px 0 black) drop-shadow(-0.5px -0.5px 0 black)",
                   }}
                 />
-                <div 
+                <div
                   className="ps-1 pe-2"
                   onClick={() => setOpen(true)}
-                  >
-                    Add Funds
+                >
+                  Add Funds
                 </div>
               </div>
             </div>
@@ -262,9 +266,15 @@ const Dashboard = () => {
           <RightNav />
         </div>
       </div>
-      <Transfer open={ open } onCLose={ () => setOpen(false) } >
-        <CoreTransfer />
-      </Transfer>
+      <TestModal open={open} onClose={() => setOpen(false)} >
+        <button 
+          onClick={() => setOpen(false)}
+          className="hover:text-gray-600"
+        >
+          <AiOutlineClose />
+        </button>
+        <FundModal />
+      </TestModal>
     </div>
   );
 };
