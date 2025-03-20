@@ -9,7 +9,7 @@ const TestModal = ({ open, children, onClose }) => {
             {/* <div className='flex justify-center items-center'>
             </div> */}
             <div className=" flex items-center justify-center h-full w-full " >
-                <div className=" bg-white p-4 h-max w-max rounded shadow-lg" onClick={(e) => e.stopPropagation()}>
+                <div className="flex-col bg-white p-4 min-w-[90%] sm:min-w-[600px] rounded-3xl shadow-lg" onClick={(e) => e.stopPropagation()}>
                     {children}
                 </div>
             </div>

@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { AiOutlineClose, AiOutlinePlus } from "react-icons/ai";
+import { AiOutlineClose, AiOutlineEye, AiOutlineEyeInvisible, AiOutlinePlus } from "react-icons/ai";
 import { GiPlayButton } from "react-icons/gi";
 import TopRightMenu from "../../components/TopRightMenu";
 import RightNav from "../../components/RightNav";
@@ -152,6 +152,12 @@ const Dashboard = () => {
 
   const [open, setOpen] = useState(false);
 
+  const [hidden, setHidden] = useState(true);
+
+  const toggleBalanceVisibility = () => {
+    setHidden(!hidden);
+  }
+
   return (
     <div>
       {/* <Transfer /> */}
@@ -168,7 +174,7 @@ const Dashboard = () => {
                 <Naira color={"white"} />
               </div>
               <div className="m-auto ps-4 truncate max-w-[20vw]">
-                <div className="accountName">Apostle Trump</div>
+                <div className="accountName">Account User</div>
                 <div className="kycLevel opacity-[0.6]">KYC Level 1</div>
               </div>
             </div>
@@ -198,14 +204,22 @@ const Dashboard = () => {
             <h4 className="">Total Balance</h4>
             <div className="flex justify-between pb-1">
               <div className="flex align-top">
-                <span className="text-xl pe-2 pt-[1.5px]">N</span>
-                <p className="walletDigits text-3xl">140,020,500.00</p>
+                <span className="text-xl pe-2 pt-[1.5px] font-mono font-bold">₦</span>
+                <div className="walletDigits flex items-center text-3xl">
+                  <span>
+                    { hidden ? '140,020,500.00' : "**************" }
+                  </span>
+                  <div className="ps-2 flex cursor-pointer" onClick={toggleBalanceVisibility}>
+                    { hidden ? <AiOutlineEyeInvisible /> : <AiOutlineEye />}
+                  </div>
+                </div>
               </div>
               <div
-                className="flex align-middle p-auto rounded-xl p-2 bg-white text-black cursor-pointer"
+                className="flex align-middle p-auto rounded-xl p-2 bg-white hover:scale-105 hover:shadow-lg transition-transform duration-300 ease-in-out text-black cursor-pointer"
                 style={{
                   filter: "blur(0.18px)",
                 }}
+                onClick={() => setOpen(true)}
               >
                 <AiOutlinePlus
                   color="black"
@@ -219,7 +233,6 @@ const Dashboard = () => {
                 />
                 <div
                   className="ps-1 pe-2"
-                  onClick={() => setOpen(true)}
                 >
                   Add Funds
                 </div>
@@ -227,8 +240,8 @@ const Dashboard = () => {
             </div>
             <div className="text-sm" style={{ fontSize: "bold" }}>
               Book Balance:
-              <span className="opacity-[0.7]"> ₦ </span>
-              1,000,000.00
+              <span className="opacity-[0.7] font-mono font-bold"> ₦ </span>
+              { hidden ? '1,000,000.00' : "************" }
             </div>
           </div>
           {/* REQ & SEND BOX */}
@@ -267,9 +280,9 @@ const Dashboard = () => {
         </div>
       </div>
       <TestModal open={open} onClose={() => setOpen(false)} >
-        <button 
+        <button
           onClick={() => setOpen(false)}
-          className="hover:text-gray-600"
+          className="hover:text-gray-600 flex justify-self-end"
         >
           <AiOutlineClose />
         </button>

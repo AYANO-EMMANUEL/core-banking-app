@@ -75,7 +75,7 @@ const Airtime = () => {
               Amount:
             </label>
             <div className="relative">
-              <NumericInpu vt value={amount} setValue={setAmount} />
+              <NumericInput value={amount} setValue={setAmount} />
               <span className="absolute left-3 top-[50%] translate-y-[-40%]">
                 ₦
               </span>

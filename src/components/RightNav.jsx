@@ -39,7 +39,7 @@ const RightNav = () => {
             <div className="bold text-center text-md py-3">
               Select a Method to { content === 'deposit' ? 'Fund Naira Wallet below' : 'Withdraw to Other Wallets' }
             </div>
-            <div className="mb-4 cursor-pointer">
+            <div className="mb-4 cursor-pointer" onClick={ () => buttonCLick('deposit') }>
               <div
                 className="flex align-middle p-1 xl:p-2 border-gray-100 rounded-3xl hover:border-none hover:shadow-md"
                 style={walletFunctionStyle}
