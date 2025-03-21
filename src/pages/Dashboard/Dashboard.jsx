@@ -194,7 +194,7 @@ const Dashboard = () => {
           </div>
           {/* WALLET BOX SHADOW */}
           <div
-            className="rounded-3xl bg-green-primary cursor-context-menu walletBg text-white p-6 py-10 mb-2"
+            className="rounded-3xl bg-green-primary cursor-context-menu walletBg text-white p-6 py-10 mb-2 select-none"
             style={{
               filter: "blur(0.46px)",
               opacity: "0.9",
@@ -286,7 +286,7 @@ const Dashboard = () => {
         >
           <AiOutlineClose />
         </button>
-        <FundModal />
+        <FundModal setOpen = { () => setOpen(false) } />
       </TestModal>
     </div>
   );

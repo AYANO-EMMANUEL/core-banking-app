@@ -53,7 +53,7 @@ const Sidebar = () => {
 
   return (
     <div className="hidden md:flex flex-1 border-r-[1px] border-gray-100 h-screen flex-col align-middle justify-between">
-      <h1 className="text-6xl font-bold mt-10 ml-14 mb-20">core.</h1>
+      <h1 className="text-6xl font-bold mt-10 ml-14 mb-20 select-none">core.</h1>
       <div className="flex-col space-y-4 mb-20">
         <NavLink to={'/app'} className={ ActiveSideNav }>
           <div className="flex align-middle p-4">
