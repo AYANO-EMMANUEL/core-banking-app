@@ -6,7 +6,7 @@ import { FiKey } from "react-icons/fi";
 import { RiInboxUnarchiveLine, RiMessage2Line } from "react-icons/ri";
 import { BsQuestionDiamond, BsQuestionDiamondFill } from "react-icons/bs";
 import { MdSecurity, MdTextsms } from "react-icons/md";
-import { GrPower } from "react-icons/gr";
+import { GrFormNext, GrPower } from "react-icons/gr";
 import { CgInfo } from "react-icons/cg";
 import ProfileTab from "../Settings/ProfileTab";
 
@@ -26,21 +26,27 @@ const Settings = () => {
                   <FiKey size={'30'} className="ms-2 h-full" />
                   <span className="opacity-70 pl-4 text-xl">Login Settings</span>
                 </div>
-                <span className="opacity-45 rounded-xl ml-2 p-1 px-2"> {">"} </span>
+                <span className="opacity-45 rounded-xl ml-2 p-1 px-2"> 
+                  <GrFormNext />
+                </span>
               </div>
               <div className="flex justify-between align-middle rounded-2xl p-3 hover-bg-green-primary hover:text-white cursor-pointer my-auto py-auto">
                 <div className="flex justify-between align-middle my-auto py-auto">
                   <AiOutlineLock size={'30'} className="ms-2 h-full" />
                   <span className="opacity-70 pl-4 text-xl">Payment Settings</span>
                 </div>
-                <span className="opacity-45 rounded-xl ml-2 p-1 px-2"> {">"} </span>
+                <span className="opacity-45 rounded-xl ml-2 p-1 px-2"> 
+                  <GrFormNext />
+                </span>
               </div>
               <div className="flex justify-between align-middle rounded-2xl p-3 hover-bg-green-primary hover:text-white cursor-pointer my-auto py-auto">
                 <div className="flex justify-between align-middle my-auto py-auto">
                   <RiInboxUnarchiveLine size={'30'} className="ms-2 h-full" />
                   <span className="opacity-70 pl-4 text-xl">Saving Settings</span>
                 </div>
-                <span className="opacity-45 rounded-xl ml-2 p-1 px-2"> {">"} </span>
+                <span className="opacity-45 rounded-xl ml-2 p-1 px-2"> 
+                  <GrFormNext />
+                </span>
               </div>
             </div>
             <div className="bg-slate-50 rounded-2xl flex flex-col my-2 gap-y-2">
@@ -49,21 +55,27 @@ const Settings = () => {
                   <BsQuestionDiamond size={'30'} className="ms-2 h-full" />
                   <span className="opacity-70 pl-4 text-xl">Security Questions</span>
                 </div>
-                <span className="opacity-45 rounded-xl ml-2 p-1 px-2"> {">"} </span>
+                <span className="opacity-45 rounded-xl ml-2 p-1 px-2"> 
+                  <GrFormNext />
+                </span>
               </div>
               <div className="flex justify-between align-middle rounded-2xl p-3 hover-bg-green-primary hover:text-white cursor-pointer my-auto py-auto">
                 <div className="flex justify-between align-middle my-auto py-auto">
                   <RiMessage2Line size={'30'} className="ms-2 h-full" />
                   <span className="opacity-70 pl-4 text-xl">SMS Alert Subscription</span>
                 </div>
-                <span className="opacity-45 rounded-xl ml-2 p-1 px-2"> {">"} </span>
+                <span className="opacity-45 rounded-xl ml-2 p-1 px-2"> 
+                  <GrFormNext />
+                </span>
               </div>
               <div className="flex justify-between align-middle hover-bg-green-primary hover:text-white rounded-2xl p-3 cursor-pointer my-auto py-auto">
                 <div className="flex justify-between align-middle my-auto py-auto">
                   <GrPower size={'30'} className="ms-2 h-full" />
                   <span className="opacity-70 pl-4 text-xl">Close Account</span>
                 </div>
-                <span className="opacity-45 rounded-xl ml-2 p-1 px-2"> {">"} </span>
+                <span className="opacity-45 rounded-xl ml-2 p-1 px-2"> 
+                  <GrFormNext />
+                </span>
               </div>
             </div>
             <div className="bg-slate-50 hover-bg-green-primary hover:text-white rounded-2xl p-3 flex flex-col my-2 gap-y-2">
@@ -72,7 +84,9 @@ const Settings = () => {
                   <MdSecurity size={'30'} className="ms-2 h-full" />
                   <span className="opacity-70 pl-4 text-xl">Security Center</span>
                 </div>
-                <span className="opacity-45 rounded-xl ml-2 p-1 px-2"> {">"} </span>
+                <span className="opacity-45 rounded-xl ml-2 p-1 px-2"> 
+                  <GrFormNext />
+                </span>
               </div>
             </div>
             <div className="bg-slate-50 hover-bg-green-primary hover:text-white rounded-2xl p-3 flex flex-col my-2 gap-y-2">
@@ -81,7 +95,9 @@ const Settings = () => {
                   <CgInfo size={'30'} className="ms-2 h-full" />
                   <span className="opacity-70 pl-4 text-xl">About</span>
                 </div>
-                <span className="opacity-45 rounded-xl ml-2 p-1 px-2">Version 1.0  {">"} </span>
+                <span className="opacity-45 rounded-xl ml-2 p-1 px-2">Version 1.0  
+                  <GrFormNext />
+                </span>
               </div>
             </div>
             <div className="bg-slate-50 hover:bg-red-500 hover:text-white cursor-pointer rounded-2xl p-3 flex flex-col my-2 gap-y-2">
