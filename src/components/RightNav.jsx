@@ -19,9 +19,45 @@ const RightNav = () => {
       boxShadow: "0px 18px 3px -14px rgba(0,0,0,0.15)",
   }
 
-  // const {
-  
-  // }
+  const [ isOpen, setIsOpen ] = useState(false);
+  const [ modalContent, setModalContent ] = useState(null);
+
+  const openModal = (content) => {
+    setModalContent(content);
+    setIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsOpen(false);
+    setModalContent(null);
+  };
+
+  const handleModalContent = () => {
+    switch(modalContent) {
+      case 'bankdeposit' :
+        return (
+          <div>
+            <h2>Bank Deposit</h2>
+            <form>
+              <input type="email" placeholder="Email" />
+              <input type="password" placeholder="Password" />
+              <button type="submit">Bank Deposit</button>
+            </form>
+          </div>
+        );
+      case 'banktransfer' :
+        return (
+          <div>
+            <h2>Bank Transfer</h2>
+            <form>
+              <input type="email" placeholder="Email" />
+              <input type="password" placeholder="Password" />
+              <button type="submit">Bank Transfer</button>
+            </form>
+          </div>
+        );
+        default: null;
+    }};
 
   return (
     <div className="pt-4 h-screen">
@@ -62,6 +98,9 @@ const RightNav = () => {
               <div
                 className="flex align-middle p-1 xl:p-2 border-gray-100 rounded-3xl hover:border-none hover:shadow-md"
                 style={walletFunctionStyle}
+                onClick={() => {
+                  openModal(label.toLowerCase() + 'deposit')
+                }}
               >
                 <div className="flex align-middle rounded-md p-2 m-auto bg-green-40">
                   {icon}
@@ -90,8 +129,30 @@ const RightNav = () => {
           </div>
         </div>
       </div>
+      {isOpen && (
+        <div
+        className="modal-overlay fixed inset-0 flex justify-center items-center bg-black bg-opacity-50"
+        onClick={closeModal}
+        >
+        <div
+          className="modal bg-white p-6 rounded-2xl relative min-w-[300px]"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <button
+          className="close-button absolute top-[10px] right-[10px] cursor-pointer"
+          onClick={(e) => {
+            e.stopPropagation();
+            closeModal();
+          }}
+          >
+          &times;
+          </button>
+          {handleModalContent()}
+        </div>
+        </div>
+      )}
     </div>
   );
 }
 
-export default RightNav
+export default RightNav;

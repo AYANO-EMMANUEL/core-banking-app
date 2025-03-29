@@ -24,8 +24,7 @@ const Products = () => {
         <TopRightMenu styles="" />
       </div>
       <div className="w-full">
-        <AllOptions />
-        
+        <AllOptions /> 
       </div>
     </div>
   );

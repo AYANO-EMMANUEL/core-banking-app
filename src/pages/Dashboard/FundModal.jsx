@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import NumericInput from '../Airtime/components/CurrencyInput';
 
 
-const FundModal = ({ setOpen }) => {
+const FundModal = ( setOpen ) => {
   const [amount, setAmount] = useState("");
   return (
     <div className=''>
