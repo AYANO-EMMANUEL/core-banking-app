@@ -13,6 +13,7 @@ import Signup from "./pages/Auth/Signup";
 import Products from "./pages/Products/Products";
 import CoreTransfer from "./pages/Transfer/CoreTransfer";
 import Airtime from "./pages/Airtime/Airtime";
+import ExternalTransfer from "./pages/Transfer/ExternalTransfer";
 
 function App() {
   // const user = null
@@ -32,6 +33,7 @@ function App() {
             {/* <Route path="/app/Profile" element={<Profile />} /> */}
             <Route path="/settings" exact element={<Settings />} />
             <Route path="/coretransfer" exact element={<CoreTransfer />} />
+            
           </Route>
           <Route path="/auth" element={<AuthLayout />}>
             <Route path="/auth/login" exact element={<Login />} />
@@ -43,6 +45,7 @@ function App() {
           <Routes>
             <Route path="/coretransfer" element={<CoreTransfer />} />
             <Route path="/airtime" element={<Airtime />} />
+            <Route path="/sendtobank" element={<ExternalTransfer />} />
           </Routes>
         )}
       

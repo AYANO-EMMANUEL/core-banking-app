@@ -6,6 +6,7 @@ import airtel from "./assets/airtel.svg";
 import { FaCheckCircle } from "react-icons/fa";
 import NumericInput from "./components/CurrencyInput";
 import { formatNumberWithCommas } from "../../utilities/AirtimeCurrencyFormat";
+import { formatPhoneNumber } from "../../utilities/phoneNumber";
 
 const Airtime = () => {
   const [currentProvider, setCurrentProvider] = useState("mtn");
@@ -64,9 +65,9 @@ const Airtime = () => {
               type="text"
               id="phoneNumber"
               value={phoneNumber}
-              onChange={(e) => setPhoneNumber(e.target.value)}
+              onChange={(e) => setPhoneNumber(formatPhoneNumber(e.target.value))}
               required
-              maxLength={11}
+              maxLength={13}
               className="w-full p-2 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
             />
           </div>
@@ -75,7 +76,7 @@ const Airtime = () => {
               Amount:
             </label>
             <div className="relative">
-              <NumericInpu vt value={amount} setValue={setAmount} />
+              <NumericInput value={amount} setValue={setAmount} />
               <span className="absolute left-3 top-[50%] translate-y-[-40%]">
                 ₦
               </span>

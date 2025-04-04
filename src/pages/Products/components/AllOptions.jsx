@@ -11,7 +11,7 @@ const OptionsSection = ({ title, options }) => {
   return (
     <div className="mb-6">
       <h3 className="text-lg font-semibold mb-4">{title}</h3>
-      <div className="grid grid-rpt gap-4">
+      <div className="grid grid-rpt gap-4 items-start">
         {options.map((option) => (
           <Option
             key={option.id}
@@ -35,8 +35,8 @@ const AllOptions = () => {
       options: [
         { id: 1, link:"", label: "Add Money", icon: <PiHandDepositFill />, onClick: () => console.log("A") },
         { id: 2, link:"/coretransfer", label: "CoreSend", icon: <FaMoneyBillAlt />, onClick: () => console.log("To Opay clicked") },
-        { id: 3, link:"", label: "Send to Bank", icon: <FaUniversity />, onClick: () => console.log("To Bank clicked") },
-        { id: 4, link:"", label: "Withdraw", icon: <PiHandWithdrawFill />, onClick: () => console.log("To Bank clicked") },
+        { id: 3, link:"/sendtobank", label: "Send to Bank", icon: <FaUniversity />, onClick: () => console.log("To Bank clicked") },
+        // { id: 4, link:"", label: "Withdraw", icon: <PiHandWithdrawFill />, onClick: () => console.log("To Bank clicked") },
       ],
     },
     {
@@ -59,8 +59,8 @@ const AllOptions = () => {
     {
       title: "Activity",
       options: [
-        { id: 12, label: "Transaction History", icon: <FaCopy />, onClick: () => console.log("Transactions clicked") },
-        { id: 13, label: "Get Statement", icon: <HiMiniDocumentMagnifyingGlass />, onClick: () => console.log("Statements clicked") },
+        { id: 12, link:"/activity", label: "Transaction History", icon: <FaCopy />, onClick: () => console.log("Transactions clicked") },
+        { id: 13, link:"", label: "Get Statement", icon: <HiMiniDocumentMagnifyingGlass />, onClick: () => console.log("Statements clicked") },
       ],
     },
   ];
