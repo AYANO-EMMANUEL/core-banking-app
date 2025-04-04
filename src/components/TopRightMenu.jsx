@@ -26,8 +26,13 @@ const TopRightMenu = ({ styles }) => {
     });
 
     return window.removeEventListener('click', () => {})
+   
   }, [showNotifications]);
 
+
+
+  const notifications = 12;
+  
   return (
     <div className={`flex justify-end ${styles}`}>
       <div className="inline-flex rounded-lg bg-gray-50">
@@ -41,6 +46,9 @@ const TopRightMenu = ({ styles }) => {
               setShowNotifications((prev) => !prev);
             }}
           />
+          <span className="size-6 rounded-full bg-red-500 text-white absolute flex items-center justify-center text-[.7rem] -top-2 -right-2 border-4 border-white font-bold">
+            {notifications > 9 ? '9+': notifications}
+          </span>
           {showNotifications && (
             <div
               className="absolute right-0 top-10 z-[100]"
