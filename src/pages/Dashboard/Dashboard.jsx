@@ -9,8 +9,12 @@ import CoreTransfer from "../Transfer/CoreTransfer";
 import ModalApp from "../../components/ModalFunc";
 import TestModal from "../../components/TestModal";
 import FundModal from "./FundModal";
+import { formatNumberWithCommas } from "../../utilities/AirtimeCurrencyFormat";
 
 const Dashboard = () => {
+
+  const [amount, setAmount] = useState(34300020);
+
   const Naira = ({ color, styles }) => {
     return (
       <svg
@@ -207,7 +211,7 @@ const Dashboard = () => {
                 <span className="text-xl pe-2 pt-[1.5px] font-mono font-bold">₦</span>
                 <div className="walletDigits flex items-center text-3xl">
                   <span>
-                    { hidden ? '140,020,500.00' : "**************" }
+                    { hidden ? formatNumberWithCommas(amount) : "**************" }
                   </span>
                   <div className="ps-2 flex cursor-pointer" onClick={toggleBalanceVisibility}>
                     { hidden ? <AiOutlineEyeInvisible /> : <AiOutlineEye />}
@@ -286,7 +290,7 @@ const Dashboard = () => {
         >
           <AiOutlineClose />
         </button>
-        <FundModal setOpen = { () => setOpen(false) } />
+        <FundModal amount={amount} setAmount={setAmount} setOpen = { () => setOpen(false) } />
       </TestModal>
     </div>
   );
