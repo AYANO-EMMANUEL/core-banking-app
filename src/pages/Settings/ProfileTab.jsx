@@ -37,7 +37,7 @@ const ProfileTab = () => {
             <div className="flex justify-between">
                 <span className="opacity-70">Core Account No:</span>
                 <div className="flex align-middle">
-                    <span className="">+234 8162638034 </span>
+                    <span className="">8162638034 </span>
                     <AiOutlineCopy className="text-green-400 cursor-pointer ml-1" />
                 </div>
             </div>
