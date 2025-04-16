@@ -91,7 +91,7 @@ const Login = () => {
           >
             Login
           </button>
-          <div>Don't have an account yet? <Link className="text-green-600 font-bold" to={'/signup'}>Sign up.</Link></div>
+          <div>Don't have an account yet? <Link className="text-green-600 font-bold" to={'/auth/signup'}>Sign up.</Link></div>
         </form>
       </div>
     </div>

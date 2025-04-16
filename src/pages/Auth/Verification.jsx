@@ -52,8 +52,9 @@ const Verification = () => {
 
   const handleResendOTP = () => {
     setTimer(30);
-    setIsResendEnabled(false);
     setOtp(new Array(5).fill(''));
+    setIsComplete(false);
+    setIsResendEnabled(false);
     console.log("OTP Resent");
   };
 
@@ -80,8 +81,8 @@ const Verification = () => {
         <button
           type="submit"
           onClick={handleSubmit}
-          className="bg-green-400 cursor-pointer text-white mt-4 py-3 px-4 rounded-md hover:bg-green-300 w-full transition duration-300"
-          disabled={!isComplete}
+          className="bg-green-400 cursor-pointer text-white mt-4 py-3 px-4 rounded-md hover:bg-green-300 w-full transition duration-300 disabled:bg-gray-300 disabled:cursor-not-allowed"
+          disabled={!isComplete || otp.length < 5}
         >
           Verify OTP
         </button>
